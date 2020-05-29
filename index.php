@@ -65,7 +65,7 @@ require('database/connect.php');
       <a class=" btn btn-indigo darken-4 front"><i class="fas fa-sign-in-alt"></i> Login</a>
       <div class="dropdown-content">
           <a href="pages/StudentLogin.php"><i class="fas fa-users"></i>&nbspAs a Student</a>
-          <a href="#"><i class="fas fa-user-tie"></i>&nbspAs a Teacher</a>
+          <a href="pages/TeacherLogin.php"><i class="fas fa-user-tie"></i>&nbspAs a Teacher</a>
           <a href="#"><i class="fas fa-user-tie"></i>&nbspAs an Admin</a>
           
       </div>
