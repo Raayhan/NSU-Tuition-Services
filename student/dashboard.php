@@ -1,8 +1,15 @@
 <?php
 require('../database/connect.php');
-include('../controllers/AddStudent.php')
+include('../controllers/AddStudent.php');
+include('../controllers/StudentLoginController.php');
 
-
+if(!isset($_SESSION['student']))
+{
+    // not logged in
+    $_SESSION["error"]='You must login first !';
+    header('Location: login.php');
+    exit();
+}
 
 
 ?>
@@ -13,7 +20,7 @@ include('../controllers/AddStudent.php')
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="icon" href="../img/icon.png" type="image/x-icon">
-    <title>Dashboard | NSU-TS</title>
+    <title>Student Dashboard | NSU-TS</title>
     
     <link rel="stylesheet" href="../css/style.css">
     
@@ -22,7 +29,8 @@ include('../controllers/AddStudent.php')
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     
     <script src="../js/responsive-nav.js"></script>
-    
+  
+</head>  
 <body>
     
 <header>
@@ -49,7 +57,7 @@ include('../controllers/AddStudent.php')
                          <?php  if (isset($_SESSION['student'])) : ?>
 
                            <html>
-                                 <h6><?php echo $_SESSION['student']['first_name'].' '.$_SESSION['student']['last_name'];?></h6>
+                                 <h6><?php echo $_SESSION['student']['first_name'].' '.$_SESSION['student']['last_name'];?> <span style="font-size:10px!important;">(Student)</span></h6>
                            </html>
 
                          <?php endif ?>
