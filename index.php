@@ -16,7 +16,9 @@ require('database/connect.php');
     <link rel="stylesheet" href="css/mdb.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -30,10 +32,10 @@ require('database/connect.php');
        
 
      <!-- News jumbotron -->
-<div class="jumbotron text-center hoverable p-4 mb-0">
+<div class="jumbotron text-center  p-4 mb-0">
 
 <!-- Grid row -->
-<div class="row welcome">
+<div class="row justify-content-center welcome">
 
   <!-- Grid column -->
   <div class="col-md-4 offset-md-1 mx-3 my-3">
@@ -62,24 +64,28 @@ require('database/connect.php');
     <p class ="para">NSU-TS is a platform for NSU Students to find suitable tutors for the courses which they find difficulties.It's also a platform for students who want to earn some money by giving tuitions to other students.</p>
     
     <div class="dropdown">
-      <a class=" btn btn-indigo darken-4 front"><i class="fas fa-sign-in-alt"></i> Login</a>
-      <div class="dropdown-content">
-          <a href="student/login.php"><i class="fas fa-users"></i>&nbspAs a Student</a>
-          <a href="teacher/login.php"><i class="fas fa-user-tie"></i>&nbspAs a Teacher</a>
-          <a href="#"><i class="fas fa-user-tie"></i>&nbspAs an Admin</a>
-          
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <i class="fas fa-sign-in-alt"></i> Login
+      </button>
+      <div class="dropdown-menu">
+         <a class="dropdown-item" href="student/login.php"><i class="fas fa-user-graduate"></i>&nbsp As Student</a>
+         <a class="dropdown-item" href="teacher/login.php"><i class="fas fa-user-tie"></i>&nbsp As Teacher</a>
+         <a class="dropdown-item" href="#"><i class="fas fa-user-secret"></i>&nbsp As Admin</a>
       </div>
     </div>
+ 
+    <div class="dropdown">    
+      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+      <i class="fas fa-user-plus"></i> Register
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="student/registration.php"><i class="fas fa-user-graduate"></i>&nbsp As Student</a>
+        <a class="dropdown-item" href="teacher/registration.php"><i class="fas fa-user-tie"></i>&nbsp As Teacher</a>
+        
+      </div>
+    </div>
+ 
 
-    <div class="dropdown">
-    <a class="btn btn-red darken-4 front"><i class="fas fa-user-plus"></i> Register</a>
-    <div class="dropdown-content">
-      
-        <a href="student/registration.php"><i class="fas fa-users"></i> As a Student</a>
-        <a href="teacher/registration.php"><i class="fas fa-user-tie"></i> As a Teacher</a>
-            
-      </div>
-    </div>
   </div>
   <!-- Grid column -->
 
