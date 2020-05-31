@@ -59,22 +59,23 @@ function register(){
     VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$gender', '$department')";
 
     if (mysqli_query($conn, $query)) {
-      $_SESSION['success']  = "New user successfully created!!";
-      header('location: ../pages/TeacherDashboard.php');
+		$logged_in_teacher_id = mysqli_insert_id($conn);
+
+		$_SESSION['teacher'] = getUserById($logged_in_teacher_id); // put logged in user in session
+		$_SESSION['success']  = "You are now logged in";
+		header('location: ../teacher/dashboard.php');
+      
       }
     else {
-     echo "Error: " . $query . "<br>" . mysqli_error($conn);
+	 echo "Error: " . $query . "<br>" . mysqli_error($conn);
+	 header('location: ../teacher/registration.php');
       }
 
 
 
 
 			// get id of the created user
-			$logged_in_teacher_id = mysqli_insert_id($conn);
-
-			$_SESSION['teacher'] = getUserById($logged_in_teacher_id); // put logged in user in session
-			$_SESSION['success']  = "You are now logged in";
-			header('location: ../pages/TeacherDashboard.php');
+			
 		}
 
 

@@ -48,22 +48,22 @@ function register(){
     VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$gender', '$department')";
 
     if (mysqli_query($conn, $query)) {
-      $_SESSION['success']  = "New user successfully created!!";
-      header('location: StudentDashboard.php');
-      }
-    else {
-     echo "Error: " . $query . "<br>" . mysqli_error($conn);
-      }
-
-
-
-
-			// get id of the created user
+      // get id of the created user
 			$logged_in_student_id = mysqli_insert_id($conn);
 
 			$_SESSION['student'] = getUserById($logged_in_student_id); // put logged in user in session
 
-			header('location: ../pages/StudentDashboard.php');
+			header('location: ../../student/dashboard.php');
+      }
+    else {
+	 echo "Error: " . $query . "<br>" . mysqli_error($conn);
+	 header('location: ../../index.php');
+      }
+
+
+
+
+			
 		}
 
 
@@ -108,7 +108,7 @@ function isSignedIn()
 if (isset($_GET['StudentSignout'])) {
 	session_destroy();
 	unset($_SESSION['student']);
-	header("location: index.php");
+	header("location: ../../index.php");
 }
 
 

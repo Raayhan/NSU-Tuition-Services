@@ -37,14 +37,14 @@ $num = mysqli_num_rows($res);
 if($num == 0){
 
   $_SESSION["error"]='Invalid Email or Password';
-  header('location:../pages/TeacherLogin.php');
+  header('location:../teacher/login.php');
 	}
 	else{
 
 	  $logged_in_teacher_id = mysqli_fetch_assoc($res);
 
 	  $_SESSION['teacher'] =($logged_in_teacher_id); // put logged in user in session
-	  header('location:../pages/TeacherDashboard.php');
+	  header('location:../teacher/dashboard.php');
 
 }
 

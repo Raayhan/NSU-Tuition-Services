@@ -64,8 +64,8 @@ require('database/connect.php');
     <div class="dropdown">
       <a class=" btn btn-indigo darken-4 front"><i class="fas fa-sign-in-alt"></i> Login</a>
       <div class="dropdown-content">
-          <a href="pages/StudentLogin.php"><i class="fas fa-users"></i>&nbspAs a Student</a>
-          <a href="pages/TeacherLogin.php"><i class="fas fa-user-tie"></i>&nbspAs a Teacher</a>
+          <a href="student/login.php"><i class="fas fa-users"></i>&nbspAs a Student</a>
+          <a href="teacher/login.php"><i class="fas fa-user-tie"></i>&nbspAs a Teacher</a>
           <a href="#"><i class="fas fa-user-tie"></i>&nbspAs an Admin</a>
           
       </div>
@@ -74,9 +74,10 @@ require('database/connect.php');
     <div class="dropdown">
     <a class="btn btn-red darken-4 front"><i class="fas fa-user-plus"></i> Register</a>
     <div class="dropdown-content">
-          <a href="pages/StudentRegistration.php"><i class="fas fa-users"></i> As a Student</a>
-          <a href="pages/TeacherRegistration.php"><i class="fas fa-user-tie"></i> As a Teacher</a>
-          
+      
+        <a href="student/registration.php"><i class="fas fa-users"></i> As a Student</a>
+        <a href="teacher/registration.php"><i class="fas fa-user-tie"></i> As a Teacher</a>
+            
       </div>
     </div>
   </div>

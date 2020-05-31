@@ -41,7 +41,7 @@ if($num == 0){
 
 //if not display error message
 $_SESSION["error"]='Invalid Email or Password';
-header('location:../pages/StudentLogin.php');
+header('location:../../student/login.php');
 
 }
 else{
@@ -49,23 +49,11 @@ else{
   $logged_in_student_id = mysqli_fetch_assoc($res);
 
   $_SESSION['student'] =($logged_in_student_id); // put logged in user in session
-  header('location:../pages/StudentDashboard.php');
+  header('location:../../student/dashboard.php');
 
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>

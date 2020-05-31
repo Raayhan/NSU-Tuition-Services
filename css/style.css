@@ -44,7 +44,7 @@ body {
   display: none;
   position: absolute;
   background-color: whitesmoke;
-  min-width: 150px;
+  min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 5px;
@@ -57,6 +57,7 @@ body {
   text-decoration: none;
   display: block;
   border-radius: 5px;
+  font-size: 11px;
 }
 
 .dropdown-content a:hover {
@@ -106,6 +107,12 @@ body {
   margin-bottom: 3%;
   cursor: pointer;
 }
+@media screen and (max-width: 49em) {
+  .register-left input {
+    margin-top: 0em !important;
+  }
+}
+
 .register-right {
   background: #f8f9fa;
   border-top-left-radius: 10% 50%;
@@ -118,6 +125,7 @@ body {
   -webkit-animation: mover 2s infinite alternate;
   animation: mover 1s infinite alternate;
 }
+
 @-webkit-keyframes mover {
   0% {
     transform: translateY(0);
@@ -143,10 +151,26 @@ body {
   padding: 10%;
   margin-top: 10%;
 }
+
 .register .login-form {
   margin-top: 10%;
-  padding: 10%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 0%;
+  padding-right: 0%;
 }
+@media screen and (min-width: 48.5em) {
+  .register .login-form {
+    padding: 10%;
+  }
+}
+@media screen and (max-width: 27em) {
+  .register .login-form {
+    margin-bottom: 20%;
+    padding: 10%;
+  }
+}
+
 .btnRegister {
   float: right;
   margin-top: 10%;
@@ -202,4 +226,48 @@ body {
   font-weight: 600;
   width: 100%;
   cursor: pointer;
+}
+
+/*  Dashboard Container CSS */
+
+.my-box-option {
+  border: 3px solid #0d012c;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.my-box-option:hover {
+  box-shadow: 2px 2px 10px black;
+}
+.my-box-image img {
+  width: 100%;
+  padding: 40px;
+}
+.my-box-content {
+  background-color: #1d2757;
+
+  padding: 20px;
+}
+.my-box-title {
+  color: #fff;
+  font-size: 20px;
+}
+.my-box-text {
+  color: #fff;
+  font-size: 12px;
+
+  height: 50px;
+}
+.box-button {
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 5px 20px;
+  border-radius: 15px;
+  background-color: #edf2f4;
+}
+.box-button:hover {
+  color: white;
+  background-color: #007e33;
 }
