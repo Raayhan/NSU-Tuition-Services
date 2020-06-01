@@ -14,6 +14,7 @@ $phone      = "";
 $gender     = "";
 $department = "";
 $password   ="";
+$nsu_id     ="";
 $errors   = array();
 
 // call the register() function if register_btn is clicked
@@ -36,6 +37,7 @@ function register(){
       $phone        = $_POST["phone"];
       $gender       = $_POST["gender"];
       $department   = $_POST["department"];
+	  $nsu_id       = $_POST["nsu_id"];
 
 
 
@@ -43,9 +45,8 @@ function register(){
 
 
 
-
-    $query = "INSERT INTO students (first_name, last_name, email, password, phone, gender, department)
-    VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$gender', '$department')";
+    $query = "INSERT INTO students (first_name, last_name, email, password, phone, gender, department, nsu_id, member_since)
+    VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$gender', '$department','$nsu_id',now())";
 
     if (mysqli_query($conn, $query)) {
       // get id of the created user

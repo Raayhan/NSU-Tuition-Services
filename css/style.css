@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.11.2/css/all.css");
 
 .logo {
@@ -243,4 +244,19 @@ body {
 .box-button:hover {
   color: white;
   background-color: #007e33;
+}
+
+.profile {
+  padding-top: 2em;
+}
+
+.information {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px !important;
+}
+.left hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
 }

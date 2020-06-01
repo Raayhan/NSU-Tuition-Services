@@ -13,7 +13,8 @@ $email      = "";
 $phone      = "";
 $gender     = "";
 $department = "";
-$password   ="";
+$password   = "";
+$nsu_id     = "";
 $errors   = array();
 
 // call the register() function if register_btn is clicked
@@ -34,7 +35,8 @@ function register(){
       $password     = $_POST["password"];
       $phone        = $_POST["phone"];
       $gender       = $_POST["gender"];
-      $department   = $_POST["department"];
+	  $department   = $_POST["department"];
+	  $nsu_id       = $_POST["nsu_id"];
 
 
 
@@ -55,8 +57,8 @@ function register(){
 
 
 
-    $query = "INSERT INTO teachers (first_name, last_name, email, password, phone, gender, department)
-    VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$gender', '$department')";
+    $query = "INSERT INTO teachers (first_name, last_name, email, password, phone, gender, department,nsu_id, member_since)
+    VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$gender', '$department', '$nsu_id',now())";
 
     if (mysqli_query($conn, $query)) {
 		$logged_in_teacher_id = mysqli_insert_id($conn);
