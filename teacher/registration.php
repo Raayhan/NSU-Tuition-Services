@@ -57,45 +57,64 @@ require('../database/connect.php');
                                         <div class="form-group">
                                             <input type="text" name="first_name" class="form-control" placeholder="First Name"required/>
                                         </div>
+                                        
                                         <div class="form-group">
                                             <input type="text" name="last_name" class="form-control" placeholder="Last Name"required/>
                                         </div>
+                                        
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control" placeholder="Password"required/>
                                         </div>
+                                        
                                         <div class="form-group">
                                             <input type="password" name="cpassword" class="form-control"  placeholder="Confirm Password"required/>
                                         </div>
                                        
                                     </div>
+                                    
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control" placeholder="Your Email"required/>
                                         </div>
+                                        
                                         <div class="form-group">
                                             <input type="text" minlength="11" maxlength="11" name="phone" class="form-control" placeholder="Your Phone"required/>
                                         </div>
-                                        <div class="form-group">
-                                            <select name="department" class="form-control">
-                                                <option class="hidden"  selected disabled>Department</option>
-                                                <option value="ECE">ECE</option>
-                                                <option value="BBA">BBA</option>
-                                                <option value="Architecture">Architecture</option>
-                                                <option value="Pharmacy">Pharmacy</option>
-                                                <option value="Civil">Civil Engineering</option>
-                                                <option value="Others">Others</option>
-                                            </select>
+                                        
+                                        <div class="row d-flex bd-highlight mx-0">
+                                          
+                                                <div class="form-group flex-grow-1 bd-highlight" style="padding-right:5px;">
+                                                    <select name="department" class="form-control">
+                                                        <option class="hidden"  selected disabled>Department</option>
+                                                        <option value="ECE">ECE</option>
+                                                        <option value="BBA">BBA</option>
+                                                        <option value="Architecture">Architecture</option>
+                                                        <option value="Pharmacy">Pharmacy</option>
+                                                        <option value="Civil Engineering">Civil Engineering</option>
+                                                        <option value="Others">Others</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group flex-grow-1 bd-highlight" style="padding-left:5px;">
+                                                    <select name="gender" class="form-control">
+                                                        <option class="hidden"  selected disabled>Gender</option>
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>
+                                                        <option value="Others">Others</option>
+                                                        
+                                                    </select>
+                                                </div>
                                         </div>
-                                        <div class="form-group">
-                                        <select name="gender" class="form-control">
-                                                <option class="hidden"  selected disabled>Gender</option>
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                                <option value="Others">Others</option>
-                                                
-                                            </select>
-                                        </div>
+                                                <div class="form-group">
+                                                    <input type="text" name="nsu_id" minlength="10" maxlength="10" class="form-control" placeholder="NSU ID"required/>
+                                                </div>
+                                          
+                                            
+                                            
+                                        <input type="hidden" name="member_since"/>
                                         <input type="submit" class="btnRegister" name="register_btn" value="Register"/>
+                                        
+
+                                       
                                     </div>
                                     <span class="mt-4">By clicking "Register" you agree with our <a class="red-text">Terms of Services</a></span>
                                 </div>
