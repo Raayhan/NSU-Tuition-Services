@@ -29,6 +29,12 @@ if(!isset($_SESSION['student']))
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     
     <script src="../js/responsive-nav.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+        $(function(){
+        $("#footer").load("../layouts/footer.html"); 
+          });
+    </script> 
   
 </head>  
 <body>
@@ -51,7 +57,7 @@ if(!isset($_SESSION['student']))
 <h3>School of Engineering & Physical Sciences</h3>
 <h6>Please select your desired category for courses</h6>
 </div>
-  <div class="container">
+  <div class="container mb-5">
   
       <div class="row justify-content-center">
         
@@ -104,14 +110,7 @@ if(!isset($_SESSION['student']))
 
 
 
-<footer class="page-footer font-small blue-gradient" style="margin-top:65px;">
-  <div class="footer-copyright text-center py-3">© 2020 Copyright : 
-    <a href="#"> NSU Tuition Services</a>
-    <div>
-      <p class="end"> Developed & Maintained By : Rayhan Ahmed Rakib</p>
-    </div>
-  
-</footer>
+<div id="footer"></div>
 
 <script src="../js/fastclick.js"></script>
 <script src="../js/scroll.js"></script>

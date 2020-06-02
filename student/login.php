@@ -24,6 +24,11 @@ include('../controllers/StudentLoginController.php');
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <script> 
+        $(function(){
+        $("#footer").load("../layouts/footer.html"); 
+          });
+    </script>   
 </head>
 <body>
 
@@ -92,22 +97,6 @@ include('../controllers/StudentLoginController.php');
             </div>
 
             <!-- Footer -->
-<footer class="page-footer font-small blue-gradient">
-
-  
-     
-  
-
- 
-<div class="footer-copyright text-center py-3">© 2020 Copyright : 
-  <a href="#"> NSU Tuition Services</a>
-  <div>
-    <p class="end"> Developed & Maintained By : Rayhan Ahmed Rakib</p>
-  
-  
-</div>
-
-
-</footer>
+<div id="footer"></div>
 </body>
 </html>
