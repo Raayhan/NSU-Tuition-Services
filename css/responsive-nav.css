@@ -243,7 +243,7 @@ header {
 
 .nav-collapse a:active,
 .nav-collapse .active a {
-  background: #007e33;
+  background: #eb8d00;
 }
 
 @media screen and (min-width: 49em) {
@@ -265,7 +265,7 @@ header {
 
 .nav-collapse ul li a:hover {
   color: white;
-  background-color: #007e33;
+  background-color: #eb8d00;
 }
 @media screen and (min-width: 49em) {
   .nav-collapse ul ul a {

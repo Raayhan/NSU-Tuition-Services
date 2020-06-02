@@ -270,7 +270,14 @@ if(!isset($_SESSION['student']))
 
 
 
-
+<footer class="page-footer font-small blue-gradient" style="margin-top:65px;">
+  <div class="footer-copyright text-center py-3">© 2020 Copyright : 
+    <a href="#"> NSU Tuition Services</a>
+    <div>
+      <p class="end"> Developed & Maintained By : Rayhan Ahmed Rakib</p>
+    </div>
+  
+</footer>
 <script src="../js/fastclick.js"></script>
 <script src="../js/scroll.js"></script>
 <script src="../js/fixed-responsive-nav.js"></script>

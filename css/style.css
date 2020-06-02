@@ -208,6 +208,7 @@ body {
   border: 3px solid #0d012c;
   overflow: hidden;
   margin: 10px 0;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .my-box-option:hover {
@@ -243,7 +244,7 @@ body {
 }
 .box-button:hover {
   color: white;
-  background-color: #007e33;
+  background-color: #eb8d00;
 }
 
 .profile {
@@ -259,4 +260,19 @@ body {
   margin-bottom: 5px;
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.section_title {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.section_title h3 {
+  padding-top: 40px;
+}
+
+.section_title h6 {
+  padding-top: 0px;
+  font-family: "Poppins", sans-serif;
 }

@@ -2,7 +2,6 @@
 require('../database/connect.php');
 include('../controllers/AddStudent.php');
 include('../controllers/StudentLoginController.php');
-
 if(!isset($_SESSION['student']))
 {
     // not logged in
@@ -13,6 +12,7 @@ if(!isset($_SESSION['student']))
 
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +20,7 @@ if(!isset($_SESSION['student']))
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="icon" href="../img/icon.png" type="image/x-icon">
-    <title>Student Dashboard | NSU-TS</title>
+    <title>SEPS | NSU-TS</title>
     
     <link rel="stylesheet" href="../css/style.css">
     
@@ -46,78 +46,62 @@ if(!isset($_SESSION['student']))
       </nav>
 </header>
 
-
-<div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12" style="padding-left: 0px;padding-right:0px;">
-          <div class="section-title">
-           <div class="alert alert-info" role="alert" style="text-align:center";>
-            <h2>Welcome !</h2>
-
-                         <?php  if (isset($_SESSION['student'])) : ?>
-
-                           <html>
-                                 <h6><?php echo $_SESSION['student']['first_name'].' '.$_SESSION['student']['last_name'];?> <span style="font-size:10px!important;">(Student)</span></h6>
-                           </html>
-
-                         <?php endif ?>
-           </div>
-                         
-
-            
-          </div>
-        </div>
-      </div>
-  </div>
 <div class="section_title">
-  <h6>Please select your desired category for courses</h6>
-</div> 
+
+<h3>School of Engineering & Physical Sciences</h3>
+<h6>Please select your desired category for courses</h6>
+</div>
   <div class="container">
   
       <div class="row justify-content-center">
         
         <div class="col-md-3">
           <div class="my-box-option">
-            <div class="my-box-image"><img src="../img/SEPS.png"></div>
+            <div class="my-box-image"><img src="../img/ece.png"></div>
             <div class="my-box-content">
-              <h2 class="my-box-title">SEPS</h2>
-              <p class="my-box-text">School of Engineering & Physical Sciences</p>
+              <h2 class="my-box-title">ECE</h2>
+              <p class="my-box-text">Electrical & Computer Engineering</p>
               <a href="seps.php" class="box-button">Go</a>
            </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="my-box-option">
-            <div class="my-box-image"><img src="../img/SBE.png"></div>
+            <div class="my-box-image"><img src="../img/dmp.png"></div>
             <div class="my-box-content">
-              <h2 class="my-box-title">SBE</h2>
-              <p class="my-box-text">School of Business & Economics</p>
+              <h2 class="my-box-title">DMP</h2>
+              <p class="my-box-text">Department of Mathematics and Physics</p>
               <a href="SBE.html" class="box-button">Go</a>
            </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="my-box-option">
-            <div class="my-box-image"><img src="../img/SHSS.png"></div>
+            <div class="my-box-image"><img src="../img/arch.png"></div>
             <div class="my-box-content">
-              <h2 class="my-box-title">SHSS</h2>
-              <p class="my-box-text">School Of Humanities & Social Sciences</p>
+              <h2 class="my-box-title">Architecture</h2>
+              <p class="my-box-text">Department of Architecture</p>
               <a href="/SBE" class="box-button">Go</a>
            </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="my-box-option">
-            <div class="my-box-image"><img src="../img/SHLS.png"></div>
+            <div class="my-box-image"><img src="../img/ce.png"></div>
             <div class="my-box-content">
-              <h2 class="my-box-title">SHLS</h2>
-              <p class="my-box-text">School of Health & Life Sciences</p>
+              <h2 class="my-box-title">CE</h2>
+              <p class="my-box-text">Civil & Environmental Engineering</p>
               <a href="/SBE" class="box-button">Go</a>
            </div>
           </div>
         </div>
       </div>
     </div>
+
+
+
+
+
 
 
 <footer class="page-footer font-small blue-gradient" style="margin-top:65px;">
