@@ -72,7 +72,12 @@ if(!isset($_SESSION['student']))
   
 
 <div class="container profile">
+<?php  if(isset($_SESSION['error'])) { echo '<div class="alert alert-warning" style="text-align:center;" role="alert" id="error">'.$_SESSION['error'].'</div>';
+        unset($_SESSION['error']);
+                                    } 
+?>
     <div class="row my-2">
+        
          <div class="col-lg-4 order-lg-1 text-center">
             <img src="../img/user.png" class="mx-auto img-fluid img-circle d-block" alt="avatar"style="border-radius: 50%;">
             <h4 class="mt-2"><?php echo $_SESSION['student']['first_name'].' '.$_SESSION['student']['last_name'];?></h4>
@@ -84,7 +89,7 @@ if(!isset($_SESSION['student']))
                       <a href="" data-target="#profile" data-toggle="tab" class="nav-link active"><i class="far fa-user-circle" aria-hidden="true"></i> Profile</a>
                   </li>
                   <li class="nav-item">
-                      <a href="" data-target="#courses" data-toggle="tab" class="nav-link"><i class="fas fa-book"></i> Courses</a>
+                      <a href="" data-target="#courses" data-toggle="tab" class="nav-link"><i class="fas fa-book"></i> My Courses</a>
                   </li>
                   <li class="nav-item">
                       <a href="" data-target="#edit" data-toggle="tab" class="nav-link"><i class="far fa-edit"></i> Edit</a>
@@ -145,38 +150,70 @@ if(!isset($_SESSION['student']))
                     <!--/row-->
                 </div>
                 <div class="tab-pane" id="courses">
-                    <div class="alert alert-info alert-dismissable">
-                        <a class="panel-close close" data-dismiss="alert">×</a> This is an <strong>.alert</strong>. Use this to show important messages to the user.
-                    </div>
-                    <table class="table table-hover table-striped">
-                        <tbody>                                    
-                            <tr>
-                                <td>
-                                   <span class="float-right font-weight-bold">3 hrs ago</span> Here is your a link to the latest summary report from the..
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <span class="float-right font-weight-bold">Yesterday</span> There has been a request on your account since that was..
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <span class="float-right font-weight-bold">9/10</span> Porttitor vitae ultrices quis, dapibus id dolor. Morbi venenatis lacinia rhoncus. 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <span class="float-right font-weight-bold">9/4</span> Vestibulum tincidunt ullamcorper eros eget luctus. 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <span class="float-right font-weight-bold">9/4</span> Maxamillion ais the fix for tibulum tincidunt ullamcorper eros. 
-                                </td>
-                            </tr>
-                        </tbody> 
-                    </table>
+                    
+                <h5 class="mb-3">Course Information</h5>
+                <div class="list-group course_table my-3">
+                    <a class="list-group-item list-group-item-action flex-column align-items-start">
+                           
+
+                <?php
+                
+                                      $sql = "SELECT * FROM student_courses WHERE student_id = {$_SESSION['student']['nsu_id']}";
+                                      $result = $conn->query($sql);
+                                      
+                                      if ($result->num_rows > 0) {
+                                      // output data of each row
+                                     
+                                      while($row = $result->fetch_assoc()) {
+                                        echo '<div class="d-flex w-100 justify-content-between">';
+                                        echo'<h5 class="mb-2 h5">'.$row['course_name']."</h5>";
+                                        echo '<small>';
+                                        echo '<form action="DeleteCourse.php" method="POST">';
+                                                       
+                                        echo '<input type="hidden" name="course_id" value= '.$row['id'].'>';
+                                                        
+                                        echo '<button type="submit" name="DeleteCourse_btn" class="btn btn-danger btn-sm m-0 p-1 ml-2">Remove</button>';
+                                        echo '</form>';
+                                        echo '</small>';
+                                        echo "</div>";
+
+                                        echo '<div class="mb-2">';
+                                        echo '<div class="course_list">
+                                              <hr><strong>Teacher Name : </strong>'.$row['teacher_name'].'<hr>';
+                                              echo '<strong>NSU ID : </strong>'.$row['teacher_id'].'<hr>';
+                                              echo '<strong>Department : </strong>'.$row['teacher_department'].'<hr>';
+                                              echo '<strong>Phone : </strong>'.$row['teacher_phone'].'<hr>';
+                                              echo '<strong>Email : </strong>'.$row['teacher_email'].'<hr>';
+                                        
+                                              
+                                              echo '</div>';
+                                              echo '<BR><hr>';
+                                              echo '</div>';
+
+
+
+
+
+
+
+
+                                        
+                                    }
+                                  } 
+                                  
+                                  else {
+                                        
+                                         echo "No Courses Available";
+                                         
+                                       
+                                      }  
+                                                                          
+                                ?>
+                   
+                                        </a>
+                                    </div>
+
+
                 </div>
                 <div class="tab-pane" id="edit">
                     <form role="form">

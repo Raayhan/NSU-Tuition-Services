@@ -16,7 +16,7 @@ if(!isset($_SESSION['student']))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta  charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="icon" href="../img/icon.png" type="image/x-icon">
@@ -70,8 +70,9 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">EEE111</h2>
               <p class="my-box-text">Analog Electronics I</p>
+              
               <button type="button" class="box-button" data-toggle="modal" data-target="#eee111">Select</button>
-
+            
 
             </div>
           </div>
@@ -82,7 +83,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">EEE 141</h2>
               <p class="my-box-text">Electrical Circuits I</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#141">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#eee141">
                 Select
             </button>
            </div>
@@ -93,7 +94,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">EEE 241</h2>
               <p class="my-box-text">Electrical Circuits II</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#215">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#eee241">
                 Select
             </button>
            </div>
@@ -104,7 +105,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">EEE 221</h2>
               <p class="my-box-text">Signals and Systems</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#225">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#eee221">
                 Select
             </button>
            </div>
@@ -113,9 +114,9 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE111</h2>
-              <p class="my-box-text">Analog Electronics I</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#111">
+              <h2 class="my-box-title">EEE311</h2>
+              <p class="my-box-text">Analog Electronics II</p>
+              <button type="button" class="box-button" data-toggle="modal" data-target="#eee311">
                 Select
             </button>
            </div>
@@ -125,20 +126,9 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 311</h2>
-              <p class="my-box-text">Analog Electronics II</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#141">
-                Select
-            </button>
-           </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="my-box-option">
-            <div class="my-box-content">
               <h2 class="my-box-title">EEE 361</h2>
               <p class="my-box-text">Electromagnetic Fields & Waves</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#215">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#eee361">
                 Select
             </button>
            </div>
@@ -149,7 +139,18 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">EEE 312</h2>
               <p class="my-box-text">Power Electronics</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#225">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#eee312">
+                Select
+            </button>
+           </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="my-box-option">
+            <div class="my-box-content">
+              <h2 class="my-box-title">EEE 321</h2>
+              <p class="my-box-text">Intro to Communications Systems</p>
+              <button type="button" class="box-button" data-toggle="modal" data-target="#eee321">
                 Select
             </button>
            </div>
@@ -160,7 +161,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">CSE115</h2>
               <p class="my-box-text">Programming Language I</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#115">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#cse115">
                 Select
             </button>
            </div>
@@ -172,7 +173,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">CSE173</h2>
               <p class="my-box-text">Discrete Mathematics</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#173">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#cse173">
                 Select
             </button>
            </div>
@@ -183,7 +184,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">CSE215</h2>
               <p class="my-box-text">Programming Language II</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#215">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#cse215">
                 Select
             </button>
            </div>
@@ -194,7 +195,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">CSE225</h2>
               <p class="my-box-text">Data Structure & Algorithms</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#225">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#cse225">
                 Select
             </button>
            </div>
@@ -205,7 +206,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">CSE231</h2>
               <p class="my-box-text">Digital Logic Design</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#231">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#cse231">
                 Select
             </button>
            </div>
@@ -216,7 +217,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">CSE311</h2>
               <p class="my-box-text">Database Systems</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#311">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#cse311">
                 Select
             </button>
            </div>
@@ -227,7 +228,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">CSE323</h2>
               <p class="my-box-text">Operating Systems Design</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#323">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#cse323">
                 Select
             </button>
            </div>
@@ -238,7 +239,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">CSE327</h2>
               <p class="my-box-text">Software Engineering</p>
-              <button type="button" class="box-button" data-toggle="modal" data-target="#327">
+              <button type="button" class="box-button" data-toggle="modal" data-target="#cse327">
                 Select
             </button>
             </div>
@@ -249,7 +250,7 @@ if(!isset($_SESSION['student']))
               <div class="my-box-content">
                 <h2 class="my-box-title">CSE331</h2>
                 <p class="my-box-text"> Microprocessor Interfacing & Embedded Sys.</p>
-                <button type="button" class="box-button" data-toggle="modal" data-target="#331">
+                <button type="button" class="box-button" data-toggle="modal" data-target="#cse331">
                   Select
               </button>
 
@@ -262,7 +263,7 @@ if(!isset($_SESSION['student']))
               <div class="my-box-content">
                 <h2 class="my-box-title">CSE373</h2>
                 <p class="my-box-text">Design and Analysis of Algorithms</p>
-                <button type="button" class="box-button" data-toggle="modal" data-target="#373">
+                <button type="button" class="box-button" data-toggle="modal" data-target="#cse373">
                   Select
               </button>
              </div>
@@ -274,7 +275,7 @@ if(!isset($_SESSION['student']))
               <div class="my-box-content">
                 <h2 class="my-box-title">CSE332</h2>
                 <p class="my-box-text">Computer Organization and Architecture</p>
-                <button type="button" class="box-button" data-toggle="modal" data-target="#332">
+                <button type="button" class="box-button" data-toggle="modal" data-target="#cse332">
                   Select
               </button>
              </div>
@@ -285,7 +286,7 @@ if(!isset($_SESSION['student']))
               <div class="my-box-content">
                 <h2 class="my-box-title">CSE425</h2>
                 <p class="my-box-text">Concepts of Programming language </p>
-                <button type="button" class="box-button" data-toggle="modal" data-target="#425">
+                <button type="button" class="box-button" data-toggle="modal" data-target="#cse425">
                   Select
               </button>
              </div>
@@ -302,7 +303,7 @@ if(!isset($_SESSION['student']))
          
                <!--Header-->
                <div class="modal-header">
-                    <h6 class="modal-title" id="myModalLabel">Available Teacher Information</h6>
+                    <h6 class="modal-title" id="myModalLabel">EEE 111 Analog Electronics I</h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                     </button>
@@ -312,7 +313,7 @@ if(!isset($_SESSION['student']))
                <div class="modal-body">    
                    <div class="table-responsive text-nowrap"> 
                         <table class="table table-hover">
-                               <thead>
+                               <thead class="rgba-green-slight">
                                     <tr>
                                       <th>Name</th>
                                       <th>NSU ID</th>
@@ -323,7 +324,7 @@ if(!isset($_SESSION['student']))
                                </thead>
                                <tbody>
                                   <?php
-                                      $sql = "SELECT * FROM courses WHERE name = 'EEE111'";
+                                      $sql = "SELECT * FROM teacher_courses WHERE name = 'EEE111'";
                                       $result = $conn->query($sql);
 
                                       if ($result->num_rows > 0) {
@@ -335,7 +336,15 @@ if(!isset($_SESSION['student']))
                                           echo "<td>".$row['nsu_id']."</td>";
                                           echo "<td>".$row['department']."</td>";
                                           echo "<td>".$row['phone']."</td>";
-                                          echo '<td><button type="button" class="btn btn-primary btn-sm m-0 p-1">Select</button></td>';
+                                          echo '<td><form action="AddCourse.php" method="POST">';
+                                                          echo '<input type="hidden" name="course_name" value="EEE111 Analog Electronics I"/>';
+                                                          echo '<input type="hidden" name="teacher_name" value='.$row['first_name'].'&nbsp;'.$row['last_name'].">";
+                                                          echo  '<input type="hidden" name="teacher_id" value= '.$row['nsu_id'].'>';
+                                                          echo  '<input type="hidden" name="student_id" value= '.$_SESSION['student']['nsu_id'].'/>';
+                                                          echo  '<input type="hidden" name="teacher_email" value= '.$row['email'].'>';
+                                                          echo  '<input type="hidden" name="teacher_phone" value= '.$row['phone'].'>';
+                                                          echo  '<input type="hidden" name="teacher_department" value= '.$row['department'].'>';
+                                          echo '<button type="submit" name="ADDCourse_btn" class="btn btn-primary btn-sm m-0 p-1">Select</button></form></td>';
 
                                         echo "</tr>";
                                       }
@@ -345,10 +354,10 @@ if(!isset($_SESSION['student']))
                                           echo "<tbody>";
                                           echo "<tr>";
                                           echo "<td>"; echo "No Teacher Available"; echo "</td>";
-                                          echo "<td>"; echo "N/A"; echo "</td>";
-                                          echo "<td>"; echo "N/A"; echo "</td>";
-                                          echo "<td>"; echo "N/A"; echo "</td>";
-                                          echo "<td>"; echo "N/A"; echo "</td>";
+                                          echo "<td>"; echo "NULL"; echo "</td>";
+                                          echo "<td>"; echo "NULL"; echo "</td>";
+                                          echo "<td>"; echo "NULL"; echo "</td>";
+                                          echo "<td>"; echo "NULL"; echo "</td>";
                                           echo "</tr>";
                                           echo "</tbody>";
                                         }  
