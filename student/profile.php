@@ -168,7 +168,7 @@ if(!isset($_SESSION['student']))
                                         echo '<div class="d-flex w-100 justify-content-between">';
                                         echo'<h5 class="mb-2 h5">'.$row['course_name']."</h5>";
                                         echo '<small>';
-                                        echo '<form action="DeleteCourse.php" method="POST">';
+                                        echo '<form action="../controllers/DeleteCourse.php" method="POST">';
                                                        
                                         echo '<input type="hidden" name="course_id" value= '.$row['id'].'>';
                                         echo '<input type="hidden" name="course_name" value= '.$row['course_name'].'>';              

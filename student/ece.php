@@ -336,7 +336,7 @@ if(!isset($_SESSION['student']))
                                           echo "<td>".$row['nsu_id']."</td>";
                                           echo "<td>".$row['department']."</td>";
                                           echo "<td>".$row['phone']."</td>";
-                                          echo '<td><form action="AddCourse.php" method="POST">';
+                                          echo '<td><form action="../controllers/AddCourse.php" method="POST">';
                                                           echo '<input type="hidden" name="course_name" value="EEE111 Analog Electronics I"/>';
                                                           echo '<input type="hidden" name="teacher_name" value='.$row['first_name'].'&nbsp;'.$row['last_name'].">";
                                                           echo  '<input type="hidden" name="teacher_id" value= '.$row['nsu_id'].'>';
