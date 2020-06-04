@@ -8,7 +8,7 @@ if(!isset($_SESSION))
 include('../database/connect.php');
 // variable declaration
 $course_id    = "";
-
+$course_name  = "";
 $errors   = array();
 
 // call the delete() function if DeleteCourse_btn is clicked
@@ -19,11 +19,11 @@ if (isset($_POST['DeleteCourse_btn'])) {
 // DELETE Course
 function delete(){
 	// call these variables with the global keyword to make them available in function
-	global $conn, $errors, $course_id;
+	global $conn, $errors, $course_id,$course_name;
 
 	
       $course_id     = $_POST["course_id"];
-         
+	  $course_name   = $_POST["course_name"];
 
 
 
@@ -34,7 +34,7 @@ $query = "DELETE FROM student_courses WHERE id='$course_id'";
 
     if (mysqli_query($conn, $query)) {
       
-            $_SESSION["error"]='Course Deleted Successfully !';
+            $_SESSION["error"]="$course_name has been deleted <i class='fas fa-check-circle'></i>";
 			header('location: profile.php');
       }
     else {

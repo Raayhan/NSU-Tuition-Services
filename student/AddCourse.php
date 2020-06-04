@@ -47,7 +47,7 @@ function add(){
     if (mysqli_query($conn, $query)) {
       
 			
-	        $_SESSION["error"]='Course Successfully Added !';
+	        $_SESSION["error"]="$course_name has been added <i class='fas fa-check-circle'></i>";
 			header('location: profile.php');
       }
     else {

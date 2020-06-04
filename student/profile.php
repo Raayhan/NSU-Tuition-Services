@@ -72,7 +72,7 @@ if(!isset($_SESSION['student']))
   
 
 <div class="container profile">
-<?php  if(isset($_SESSION['error'])) { echo '<div class="alert alert-warning" style="text-align:center;" role="alert" id="error">'.$_SESSION['error'].'</div>';
+<?php  if(isset($_SESSION['error'])) { echo '<div class="alert alert-success" style="text-align:center;" role="alert" id="error">'.$_SESSION['error'].'</div>';
         unset($_SESSION['error']);
                                     } 
 ?>
@@ -171,8 +171,8 @@ if(!isset($_SESSION['student']))
                                         echo '<form action="DeleteCourse.php" method="POST">';
                                                        
                                         echo '<input type="hidden" name="course_id" value= '.$row['id'].'>';
-                                                        
-                                        echo '<button type="submit" name="DeleteCourse_btn" class="btn btn-danger btn-sm m-0 p-1 ml-2">Remove</button>';
+                                        echo '<input type="hidden" name="course_name" value= '.$row['course_name'].'>';              
+                                        echo '<button type="submit" name="DeleteCourse_btn" class="btn btn-red btn-sm m-0 p-2 ml-2">REMOVE</button>';
                                         echo '</form>';
                                         echo '</small>';
                                         echo "</div>";

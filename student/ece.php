@@ -344,7 +344,7 @@ if(!isset($_SESSION['student']))
                                                           echo  '<input type="hidden" name="teacher_email" value= '.$row['email'].'>';
                                                           echo  '<input type="hidden" name="teacher_phone" value= '.$row['phone'].'>';
                                                           echo  '<input type="hidden" name="teacher_department" value= '.$row['department'].'>';
-                                          echo '<button type="submit" name="ADDCourse_btn" class="btn btn-primary btn-sm m-0 p-1">Select</button></form></td>';
+                                          echo '<button type="submit" name="ADDCourse_btn" class="btn btn-primary btn-sm m-0 p-1">ADD <i class="fas fa-plus-circle"></i></button></form></td>';
 
                                         echo "</tr>";
                                       }
