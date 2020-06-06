@@ -35,7 +35,7 @@ body {
 }
 .dropdown-menu a:hover {
   background-color: #1a237e;
-  color: white;
+  color: white !important;
 }
 .title {
   font-family: "Cinzel", serif;
@@ -297,4 +297,7 @@ body {
 }
 .teacher_dashboard {
   font-family: "Poppins", sans-serif;
+}
+.btn-indigo {
+  margin: 0px !important;
 }

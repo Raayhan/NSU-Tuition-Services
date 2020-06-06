@@ -81,13 +81,13 @@ if(!isset($_SESSION['teacher']))
         <div class="col-lg-8 order-lg-2">
              <ul class="nav nav-tabs">
                   <li class="nav-item">
-                      <a href="" data-target="#profile" data-toggle="tab" class="nav-link active"><i class="far fa-user-circle" aria-hidden="true"></i> Profile</a>
+                      <a href="" data-target="#profile" data-toggle="tab" class="nav-link tab_button active"><i class="far fa-user-circle" aria-hidden="true"></i> Profile</a>
                   </li>
                   <li class="nav-item">
-                      <a href="" data-target="#courses" data-toggle="tab" class="nav-link"><i class="fas fa-book"></i> Courses</a>
+                      <a href="" data-target="#courses" data-toggle="tab" class="nav-link tab_button"><i class="fas fa-book"></i> Courses</a>
                   </li>
                   <li class="nav-item">
-                      <a href="" data-target="#edit" data-toggle="tab" class="nav-link"><i class="far fa-edit"></i> Edit</a>
+                      <a href="" data-target="#edit" data-toggle="tab" class="nav-link tab_button"><i class="far fa-edit"></i> Edit</a>
                   </li>
              </ul>
             <div class="tab-content py-4">
@@ -145,38 +145,64 @@ if(!isset($_SESSION['teacher']))
                     <!--/row-->
                 </div>
                 <div class="tab-pane" id="courses">
-                    <div class="alert alert-info alert-dismissable">
-                        <a class="panel-close close" data-dismiss="alert">×</a> This is an <strong>.alert</strong>. Use this to show important messages to the user.
-                    </div>
-                    <table class="table table-hover table-striped">
-                        <tbody>                                    
-                            <tr>
-                                <td>
-                                   <span class="float-right font-weight-bold">3 hrs ago</span> Here is your a link to the latest summary report from the..
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <span class="float-right font-weight-bold">Yesterday</span> There has been a request on your account since that was..
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <span class="float-right font-weight-bold">9/10</span> Porttitor vitae ultrices quis, dapibus id dolor. Morbi venenatis lacinia rhoncus. 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <span class="float-right font-weight-bold">9/4</span> Vestibulum tincidunt ullamcorper eros eget luctus. 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <span class="float-right font-weight-bold">9/4</span> Maxamillion ais the fix for tibulum tincidunt ullamcorper eros. 
-                                </td>
-                            </tr>
-                        </tbody> 
-                    </table>
+                <div class="row justify-content-center">
+                              <h5 class="mb-3">Courses Information</h5>
+                     </div>
+
+                     <div class="table-responsive text-nowrap"> 
+                        <table class="table table-hover">
+                               <thead class="rgba-teal-slight">
+                                    <tr>
+                                      <th>Course Name</th>
+                                      <th>Added on</th>
+                                      <th></th>
+                                    </tr>
+                               </thead>
+                               <tbody>
+                           
+
+                           <?php
+                
+                                      $sql = "SELECT * FROM teacher_courses WHERE nsu_id = {$_SESSION['teacher']['nsu_id']}";
+                                      $result = $conn->query($sql);
+                                      
+                                      if ($result->num_rows > 0) {
+                                      // output data of each row
+                                     
+                                      while($row = $result->fetch_assoc()) {
+                                        
+                                        echo"<tr>";
+                                        echo "<td>".$row['name']."</td>";
+                                        echo "<td>".$row['time']."</td>";
+                                        echo '<td><form action="../controllers/DeleteTCourse.php" method="POST">';
+                                        echo '<input type="hidden" name="id" value= '.$row['id'].'>';
+                                        echo '<input type="hidden" name="name" value= '.$row['name'].'>';
+
+                                        echo '<button type="submit" name="DeleteCourse_btn" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></form></td>';
+                                        echo "</tr>";
+
+
+
+
+                                        
+                                    }
+                                  } 
+                                  
+                                  else {
+                                        
+                                        echo "<tbody>";
+                                        echo "<tr>";
+                                        echo "<td>"; echo "No Course Available"; echo "</td>";
+                                        echo "<td>"; echo "NULL"; echo "</td>";
+                                        echo "</tr>";
+                                        echo "</tbody>";
+                                      }  
+                                                                          
+                            ?>
+                   
+                           </tbody>
+                      </table>
+                   </div>
                 </div>
                 <div class="tab-pane" id="edit">
                     <form role="form">

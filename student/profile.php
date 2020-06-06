@@ -86,13 +86,13 @@ if(!isset($_SESSION['student']))
         <div class="col-lg-8 order-lg-2">
              <ul class="nav nav-tabs">
                   <li class="nav-item">
-                      <a href="" data-target="#profile" data-toggle="tab" class="nav-link active"><i class="far fa-user-circle" aria-hidden="true"></i> Profile</a>
+                      <a href="" data-target="#profile" data-toggle="tab" class="nav-link tab_button active"><i class="far fa-user-circle" aria-hidden="true"></i> Profile</a>
                   </li>
                   <li class="nav-item">
-                      <a href="" data-target="#courses" data-toggle="tab" class="nav-link"><i class="fas fa-book"></i> My Courses</a>
+                      <a href="" data-target="#courses" data-toggle="tab" class="nav-link tab_button"><i class="fas fa-book"></i> My Courses</a>
                   </li>
                   <li class="nav-item">
-                      <a href="" data-target="#edit" data-toggle="tab" class="nav-link"><i class="far fa-edit"></i> Edit</a>
+                      <a href="" data-target="#edit" data-toggle="tab" class="nav-link tab_button"><i class="far fa-edit"></i> Edit</a>
                   </li>
              </ul>
             <div class="tab-content py-4">
@@ -172,7 +172,7 @@ if(!isset($_SESSION['student']))
                                                        
                                         echo '<input type="hidden" name="course_id" value= '.$row['id'].'>';
                                         echo '<input type="hidden" name="course_name" value= '.$row['course_name'].'>';              
-                                        echo '<button type="submit" name="DeleteCourse_btn" class="btn btn-red btn-sm m-0 p-2 ml-2">REMOVE</button>';
+                                        echo '<button type="submit" name="DeleteCourse_btn" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
                                         echo '</form>';
                                         echo '</small>';
                                         echo "</div>";
