@@ -8,6 +8,7 @@ if(!isset($_SESSION))
 include('../database/connect.php');
 // variable declaration
 $course_name    = "";
+$student_name   = "";
 $teahcer_name   = "";
 $teacher_id     = "";
 $student_id     = "";
@@ -27,7 +28,8 @@ function add(){
 	global $conn, $errors, $course_name, $teacher_name, $teacher_id, $student_id, $teacher_department, $teacher_email, $teacher_phone;
 
 	
-      $course_name     = $_POST["course_name"];
+	  $course_name     = $_POST["course_name"];
+	  $student_name    = $_POST["student_name"];
       $teacher_name    = $_POST["teacher_name"];
 	  $teacher_id      = $_POST["teacher_id"];
 	  $student_id      = $_POST["student_id"]; 
@@ -41,13 +43,13 @@ function add(){
 
 
 
-    $query = "INSERT INTO student_courses (course_name, teacher_name, teacher_id,student_id,teacher_email,teacher_phone,teacher_department)
-    VALUES ('$course_name', '$teacher_name', '$teacher_id', '$student_id','$teacher_email','$teacher_phone','$teacher_department')";
+    $query = "INSERT INTO student_courses (course_name, student_name, teacher_name, teacher_id,student_id,teacher_email,teacher_phone,teacher_department)
+    VALUES ('$course_name', '$student_name', '$teacher_name', '$teacher_id', '$student_id','$teacher_email','$teacher_phone','$teacher_department')";
 
     if (mysqli_query($conn, $query)) {
       
 			
-	        $_SESSION["error"]="$course_name has been added <i class='fas fa-check-circle'></i>";
+	        $_SESSION["error"]="<b>$course_name</b> has been added <i class='fas fa-check-circle'></i>";
 			header('location: ../student/profile.php');
       }
     else {

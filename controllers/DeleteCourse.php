@@ -34,7 +34,7 @@ $query = "DELETE FROM student_courses WHERE id='$course_id'";
 
     if (mysqli_query($conn, $query)) {
       
-            $_SESSION["error"]="$course_name has been deleted <i class='fas fa-check-circle'></i>";
+            $_SESSION["error"]="<b>$course_name</b> has been deleted <i class='fas fa-check-circle'></i>";
 			header('location: ../student/profile.php');
       }
     else {

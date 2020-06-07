@@ -34,7 +34,7 @@ $query = "DELETE FROM teacher_courses WHERE id='$id'";
 
     if (mysqli_query($conn, $query)) {
       
-            $_SESSION["error"]="'$name' has been deleted <i class='fas fa-check-circle'></i>";
+            $_SESSION["error"]="<b>$name</b> has been deleted <i class='fas fa-check-circle'></i>";
 			header('location: ../teacher/dashboard.php');
       }
     else {

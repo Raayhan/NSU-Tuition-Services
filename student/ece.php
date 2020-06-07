@@ -324,7 +324,7 @@ if(!isset($_SESSION['student']))
                                </thead>
                                <tbody>
                                   <?php
-                                      $sql = "SELECT * FROM teacher_courses WHERE name = 'EEE111'";
+                                      $sql = "SELECT * FROM teacher_courses WHERE name = 'EEE111 Analog Electronics I'";
                                       $result = $conn->query($sql);
 
                                       if ($result->num_rows > 0) {
@@ -338,6 +338,7 @@ if(!isset($_SESSION['student']))
                                           echo "<td>".$row['phone']."</td>";
                                           echo '<td><form action="../controllers/AddCourse.php" method="POST">';
                                                           echo '<input type="hidden" name="course_name" value="EEE111 Analog Electronics I"/>';
+                                                          echo '<input type="hidden" name="student_name" value='.$_SESSION['student']['first_name'].'&nbsp;'.$_SESSION['student']['last_name'].">";
                                                           echo '<input type="hidden" name="teacher_name" value='.$row['first_name'].'&nbsp;'.$row['last_name'].">";
                                                           echo  '<input type="hidden" name="teacher_id" value= '.$row['nsu_id'].'>';
                                                           echo  '<input type="hidden" name="student_id" value= '.$_SESSION['student']['nsu_id'].'/>';
