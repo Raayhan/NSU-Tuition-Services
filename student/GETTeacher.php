@@ -86,7 +86,7 @@ if(!isset($_SESSION['student']))
                                         
                                        
                                         echo '<div class="my-card-option">';
-                                        echo      '<div class="my-card-heading"><h4><i class="fas fa-user-tie"></i> <b>'.$row['first_name']." ".$row['last_name'].'</b></h4></div>';
+                                        echo      '<div class="my-card-heading"><h5><i class="fas fa-user-tie"></i> <b>'.$row['first_name']." ".$row['last_name'].'</b></h5></div>';
                                         echo            '<div class="my-card-content">';
                                         echo                 '<h2 class="my-box-title">'.$course.'</h2>';
                                         echo                  '<div class="GetTeacherList"> <hr>';
@@ -124,7 +124,7 @@ if(!isset($_SESSION['student']))
 
                                       }}
                                       else{
-                                        echo '<div class="d-flex justify-content-center">No Teacher Available</div>';
+                                        echo '<div class="d-flex justify-content-center" style="height: 42vh;">No Teacher Available</div>';
                                       }
          
   
