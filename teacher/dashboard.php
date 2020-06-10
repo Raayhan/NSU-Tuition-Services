@@ -112,8 +112,12 @@ if(!isset($_SESSION['teacher']))
                     
                     <div class="container py-4">
                         <div class="row text-center">
+                        
+
+                            
                             <div class="col">
                                 <div class="counter">
+                                
                                     <i class="fa fa-book-reader fa-2x"></i>
                                     <h1 class="timer count-title count-number" 
                                     data-to=
@@ -133,6 +137,7 @@ if(!isset($_SESSION['teacher']))
                             </div>
                             <div class="col">
                                 <div class="counter">
+                                
                                     <i class="fas fa-user-graduate fa-2x"></i>
                                     <h1 class="timer count-title count-number" data-to=
                                     
@@ -158,9 +163,69 @@ if(!isset($_SESSION['teacher']))
                 </div>
                 <div class="tab-pane" id="courses">
                  
-                    
+                <div class="row justify-content-center">
+                                     
+                                     <h5 class="mb-3">Courses Information</h5>
+                                </div>
+                               
+                                <div class="table-responsive text-nowrap mb-5"> 
+                                    <hr>
+                                    <table class="table table-hover">
+                                          <thead class="rgba-teal-slight">
+                                                 <tr>
+                                                    <th>Course Name</th>
+                                                    <th>Added on</th>
+                                                   <th></th>
+                                                 </tr>
+                                          </thead>
+                                          <tbody>
+                          
+
+                          <?php
+               
+                                     $sql = "SELECT * FROM teacher_courses WHERE nsu_id = {$_SESSION['teacher']['nsu_id']}";
+                                     $result = $conn->query($sql);
+                                     
+                                     if ($result->num_rows > 0) {
+                                     // output data of each row
+                                    
+                                     while($row = $result->fetch_assoc()) {
+                                       
+                                       echo"<tr>";
+                                       echo "<td>".$row['name']."</td>";
+                                       echo "<td>".$row['time']."</td>";
+                                       echo '<td><form action="../controllers/DeleteTCourse.php" method="POST">';
+                                       echo '<input type="hidden" name="id" value= '.$row['id'].'>';
+                                       echo '<input type="hidden" name="name" value= '.$row['name'].'>';
+
+                                       echo '<button type="submit" name="DeleteCourse_btn" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></form></td>';
+                                       echo "</tr>";
+                                      
+
+
+
+                                       
+                                   }
+                                 } 
+                                 
+                                 else {
+                                       
+                                       echo "<tbody>";
+                                       echo "<tr>";
+                                       echo "<td>"; echo "No Course Available"; echo "</td>";
+                                       echo "<td>"; echo "NULL"; echo "</td>";
+                                       echo "</tr>";
+                                       echo "</tbody>";
+                                     }  
+                                                                         
+                           ?>
+                  
+                                              </tbody>
+                                       </table>
+                                       <hr>
+                                  </div>    
                          
-                <hr>
+                                  <hr>
                               <div class="row justify-content-center">
                                    <h5 class="mt-3 mb-3">Add A Course</h5>
                               </div>
@@ -978,67 +1043,7 @@ if(!isset($_SESSION['teacher']))
                            
                             
                               
-                                 <div class="row justify-content-center">
-                                     
-                                      <h5 class="mb-3">Courses Information</h5>
-                                 </div>
-                                
-                                 <div class="table-responsive text-nowrap mb-5"> 
-                                     <hr>
-                                     <table class="table table-hover">
-                                           <thead class="rgba-teal-slight">
-                                                  <tr>
-                                                     <th>Course Name</th>
-                                                     <th>Added on</th>
-                                                    <th></th>
-                                                  </tr>
-                                           </thead>
-                                           <tbody>
-                           
-
-                           <?php
-                
-                                      $sql = "SELECT * FROM teacher_courses WHERE nsu_id = {$_SESSION['teacher']['nsu_id']}";
-                                      $result = $conn->query($sql);
-                                      
-                                      if ($result->num_rows > 0) {
-                                      // output data of each row
-                                     
-                                      while($row = $result->fetch_assoc()) {
-                                        
-                                        echo"<tr>";
-                                        echo "<td>".$row['name']."</td>";
-                                        echo "<td>".$row['time']."</td>";
-                                        echo '<td><form action="../controllers/DeleteTCourse.php" method="POST">';
-                                        echo '<input type="hidden" name="id" value= '.$row['id'].'>';
-                                        echo '<input type="hidden" name="name" value= '.$row['name'].'>';
-
-                                        echo '<button type="submit" name="DeleteCourse_btn" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></form></td>';
-                                        echo "</tr>";
-                                       
-
-
-
-                                        
-                                    }
-                                  } 
-                                  
-                                  else {
-                                        
-                                        echo "<tbody>";
-                                        echo "<tr>";
-                                        echo "<td>"; echo "No Course Available"; echo "</td>";
-                                        echo "<td>"; echo "NULL"; echo "</td>";
-                                        echo "</tr>";
-                                        echo "</tbody>";
-                                      }  
-                                                                          
-                            ?>
-                   
-                                               </tbody>
-                                        </table>
-                                        <hr>
-                                   </div>             
+                                          
                                     
                                     
                               
@@ -1061,7 +1066,7 @@ if(!isset($_SESSION['teacher']))
                                                      <th>Student Name</th>
                                                      <th>Student ID</th>
                                                      <th>Course</th>
-                                                    <th></th>
+                                                    
                                                   </tr>
                                            </thead>
                                            <tbody>

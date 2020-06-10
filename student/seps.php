@@ -67,7 +67,7 @@ if(!isset($_SESSION['student']))
             <div class="my-box-content">
               <h2 class="my-box-title">ECE</h2>
               <p class="my-box-text">Electrical & Computer Engineering</p>
-              <a href="ece.php" class="box-button">Go</a>
+              <a href="ECE.php" class="box-button">Go</a>
            </div>
           </div>
         </div>

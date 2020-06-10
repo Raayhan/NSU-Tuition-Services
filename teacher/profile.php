@@ -119,8 +119,20 @@ if(!isset($_SESSION['teacher']))
                             <a class="badge badge-dark badge-pill">NSU</a>
                             
                             <hr>
-                            <span class="badge badge-info"><i class="fa fa-user"></i> 0 Followers</span>
-                            <span class="badge badge-primary"><i class="fa fa-user"></i> 0 Following</span>
+                            <span class="badge badge-info"><i class="fa fa-book-reader"></i> <?php 
+                                                $result = mysqli_query($conn, "SELECT name FROM teacher_courses WHERE nsu_id = {$_SESSION['teacher']['nsu_id']}");
+                                                $num_rows = mysqli_num_rows($result);
+                                                
+                                                echo "$num_rows";
+
+                                                ?> Courses</span>
+                            <span class="badge badge-primary"><i class="fa fa-user-tie"></i>  <?php 
+                                                $result = mysqli_query($conn, "SELECT student_id FROM student_courses WHERE teacher_id = {$_SESSION['teacher']['nsu_id']}");
+                                                $num_rows = mysqli_num_rows($result);
+                                                
+                                                echo "$num_rows";
+
+                                                ?> Students</span>
                             <span class="badge badge-danger"><i class="fa fa-eye"></i> 0 Views</span>
                         </div>
                         <div class="col-md-12">
@@ -149,7 +161,7 @@ if(!isset($_SESSION['teacher']))
                               <h5 class="mb-3">Courses Information</h5>
                      </div>
 
-                     <div class="table-responsive text-nowrap"> 
+                     <div class="table-responsive text-nowrap teacher_dashboard"> 
                         <table class="table table-hover">
                                <thead class="rgba-teal-slight">
                                     <tr>
