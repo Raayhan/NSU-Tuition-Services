@@ -61,7 +61,7 @@ if(!isset($_SESSION['student']))
   
       <div class="row justify-content-center">
         
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-image"><img src="../img/ece.png"></div>
             <div class="my-box-content">
@@ -71,7 +71,7 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-image"><img src="../img/dmp.png"></div>
             <div class="my-box-content">
@@ -81,7 +81,7 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-image"><img src="../img/arch.png"></div>
             <div class="my-box-content">
@@ -91,7 +91,7 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-image"><img src="../img/ce.png"></div>
             <div class="my-box-content">

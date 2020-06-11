@@ -160,7 +160,7 @@ body {
 .register .nav-tabs {
   margin-top: 3%;
   border: none;
-  background: #eb8d00;
+  background: #0062cc;
   border-radius: 1.5rem;
   width: 28%;
   float: right;
@@ -178,8 +178,8 @@ body {
 }
 .register .nav-tabs .nav-link.active {
   width: 100px;
-  color: #880000;
-  border: 2px solid #eb8d00;
+  color: #495057;
+  border: 2px solid #0062cc;
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
 }

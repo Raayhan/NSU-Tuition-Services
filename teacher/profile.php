@@ -73,7 +73,7 @@ if(!isset($_SESSION['teacher']))
 
 <div class="container profile">
     <div class="row my-2">
-         <div class="col-lg-4 order-lg-1 text-center">
+         <div class="col-lg-4 order-lg-1 text-center animated slideInLeft faster">
             <img src="../img/teacher.png" class="mx-auto img-fluid img-circle d-block" alt="avatar"style="border-radius: 50%;">
             <h4 class="mt-2"><?php echo $_SESSION['teacher']['first_name'].' '.$_SESSION['teacher']['last_name'];?></h4>
             <span>Teacher</span>
@@ -92,9 +92,9 @@ if(!isset($_SESSION['teacher']))
              </ul>
             <div class="tab-content py-4">
                 <div class="tab-pane active" id="profile">
-                    <h5 class="mb-3">Teacher Information</h5>
+                    <h5 class="mb-3 animated zoomIn faster">Teacher Information</h5>
                     <div class="row information">
-                        <div class="col-md-6 left">
+                        <div class="col-md-6 left animated zoomIn faster">
                             <hr>
                             <strong>Name :</strong> <?php echo $_SESSION['teacher']['first_name'].' '.$_SESSION['teacher']['last_name'];?>
                             <hr>
@@ -111,7 +111,7 @@ if(!isset($_SESSION['teacher']))
                             <strong>Member Since :</strong> <?php echo $_SESSION['teacher']['member_since'];?>
                             <hr>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 animated slideInRight faster">
                             <h6><i class="fas fa-award"></i> Recent badges</h6>
                             <a class="badge badge-dark badge-pill">Member</a>
                             <a class="badge badge-dark badge-pill">Teacher</a>
@@ -135,7 +135,7 @@ if(!isset($_SESSION['teacher']))
                                                 ?> Students</span>
                             <span class="badge badge-danger"><i class="fa fa-eye"></i> 0 Views</span>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12 animated slideInUp faster">
                             <h5 class="mt-4"><i class="far fa-clock"></i> Recent Activity</h5>
                             <table class="table table-sm table-hover table-striped">
                                 <tbody>                                    
@@ -157,11 +157,11 @@ if(!isset($_SESSION['teacher']))
                     <!--/row-->
                 </div>
                 <div class="tab-pane" id="courses">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center animated zoomIn faster">
                               <h5 class="mb-3">Courses Information</h5>
                      </div>
 
-                     <div class="table-responsive text-nowrap teacher_dashboard"> 
+                     <div class="table-responsive text-nowrap teacher_dashboard animated zoomIn faster"> 
                         <table class="table table-hover">
                                <thead class="rgba-teal-slight">
                                     <tr>

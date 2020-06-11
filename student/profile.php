@@ -140,7 +140,7 @@ if(!isset($_SESSION['student']))
                                                 ?> Teachers</span>
                             <span class="badge badge-danger"><i class="fa fa-eye"></i> 0 Views</span>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12 animated slideInUp faster">
                             <h5 class="mt-4"><i class="far fa-clock"></i> Recent Activity</h5>
                             <table class="table table-sm table-hover table-striped">
                                 <tbody>                                    

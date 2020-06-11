@@ -68,7 +68,7 @@ if(!isset($_SESSION['student']))
 
 <div class="container mb-5">
     <div class="row">
-      <div class="col-md-3 animated zoomIn">
+      <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">MAT 116</h2>
@@ -83,7 +83,7 @@ if(!isset($_SESSION['student']))
 
         </div>
 
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">MAT 120</h2>
@@ -95,7 +95,7 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">MAT 125</h2>
@@ -109,7 +109,7 @@ if(!isset($_SESSION['student']))
           </div>
         </div>
         
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">MAT 130</h2>
@@ -121,7 +121,7 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">MAT 250</h2>
@@ -133,7 +133,7 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">MAT 361</h2>
@@ -146,7 +146,7 @@ if(!isset($_SESSION['student']))
           </div>
 
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">MAT 350</h2>
@@ -158,7 +158,7 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">PHY 107</h2>
@@ -170,7 +170,7 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">PHY 108</h2>
@@ -182,7 +182,7 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">CHE 101</h2>
@@ -194,7 +194,7 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">EEE 452</h2>
@@ -206,7 +206,7 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">
             <div class="my-box-content">
               <h2 class="my-box-title">EEE154</h2>

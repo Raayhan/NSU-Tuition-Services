@@ -93,7 +93,7 @@ if(!isset($_SESSION['teacher']))
         
          
         <div class="col-lg-8 order-lg-2">
-             <ul class="nav nav-tabs justify-content-around">
+             <ul class="nav nav-tabs justify-content-around animated zoomIn faster">
                   <li class="nav-item">
                       <a href="" data-target="#status" data-toggle="tab" class="nav-link tab_button active"><i class="fas fa-check-circle" aria-hidden="true"></i> Status</a>
                   </li>
@@ -110,7 +110,7 @@ if(!isset($_SESSION['teacher']))
                 
                 <div class="tab-pane active" id="status">
                     
-                    <div class="container py-4">
+                    <div class="container py-4 animated zoomIn faster">
                         <div class="row text-center">
                         
 
@@ -163,12 +163,12 @@ if(!isset($_SESSION['teacher']))
                 </div>
                 <div class="tab-pane" id="courses">
                  
-                <div class="row justify-content-center">
+                <div class="row justify-content-center animated zoomIn faster">
                                      
                                      <h5 class="mb-3">Courses Information</h5>
                                 </div>
                                
-                                <div class="table-responsive text-nowrap mb-5"> 
+                                <div class="table-responsive text-nowrap mb-5 animated zoomIn faster"> 
                                     <hr>
                                     <table class="table table-hover">
                                           <thead class="rgba-teal-slight">
@@ -1054,11 +1054,11 @@ if(!isset($_SESSION['teacher']))
                 <div class="tab-pane" id="students">
                 
                 <hr>
-                              <div class="row justify-content-center">
+                              <div class="row justify-content-center animated zoomIn faster">
                                    <h5 class="mt-3 mb-3">Current Students</h5>
                               </div>
                 
-                              <div class="table-responsive text-nowrap mb-5"> 
+                              <div class="table-responsive text-nowrap mb-5 animated zoomIn faster"> 
                                      <hr>
                                      <table class="table table-hover">
                                            <thead class="rgba-teal-slight">
