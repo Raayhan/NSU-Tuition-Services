@@ -126,7 +126,7 @@ if(!isset($_SESSION['teacher']))
                                                 echo "$num_rows";
 
                                                 ?> Courses</span>
-                            <span class="badge badge-primary"><i class="fa fa-user-tie"></i>  <?php 
+                            <span class="badge badge-primary"><i class="fas fa-user-graduate"></i>  <?php 
                                                 $result = mysqli_query($conn, "SELECT student_id FROM student_courses WHERE teacher_id = {$_SESSION['teacher']['nsu_id']}");
                                                 $num_rows = mysqli_num_rows($result);
                                                 
@@ -171,7 +171,7 @@ if(!isset($_SESSION['teacher']))
                                     </tr>
                                </thead>
                                <tbody>
-                           
+                            
 
                            <?php
                 

@@ -81,7 +81,7 @@ if(!isset($_SESSION['student']))
   
       <div class="row justify-content-center">
         
-        <div class="col-md-3">
+        <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-image"><img src="../img/SEPS.png"></div>
             <div class="my-box-content">
@@ -91,33 +91,33 @@ if(!isset($_SESSION['student']))
            </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-image"><img src="../img/SBE.png"></div>
             <div class="my-box-content">
               <h2 class="my-box-title">SBE</h2>
               <p class="my-box-text">School of Business & Economics</p>
-              <a href="SBE.html" class="box-button">Go</a>
+              <a href="SBE.php" class="box-button">Go</a>
            </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-image"><img src="../img/SHSS.png"></div>
             <div class="my-box-content">
               <h2 class="my-box-title">SHSS</h2>
               <p class="my-box-text">School Of Humanities & Social Sciences</p>
-              <a href="/SBE" class="box-button">Go</a>
+              <a href="#" class="box-button">Go</a>
            </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-image"><img src="../img/SHLS.png"></div>
             <div class="my-box-content">
               <h2 class="my-box-title">SHLS</h2>
               <p class="my-box-text">School of Health & Life Sciences</p>
-              <a href="/SBE" class="box-button">Go</a>
+              <a href="#" class="box-button">Go</a>
            </div>
           </div>
         </div>

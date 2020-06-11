@@ -21,7 +21,7 @@ if(!isset($_SESSION['student']))
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="icon" href="../img/icon.png" type="image/x-icon">
-    <title>EEE | NSU-TS</title>
+    <title>DMP | NSU-TS</title>
     
     <link rel="stylesheet" href="../css/style.css">
     
@@ -60,7 +60,7 @@ if(!isset($_SESSION['student']))
 
 <div class="section_title">
 
-<h3>Electrical & Electronics Engineering</h3>
+<h3>Department of Mathematics and Physics</h3>
 <h6>Please select your desired course for tuition</h6>
 </div>
 
@@ -71,10 +71,10 @@ if(!isset($_SESSION['student']))
       <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE111</h2>
-              <p class="my-box-text">Analog Electronics I</p>
+              <h2 class="my-box-title">MAT 116</h2>
+              <p class="my-box-text">Pre-Calculus</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE111">
+              <input type="hidden" name="course" value="MAT116">
               <button type="submit" class="box-button">Select</button>
               </form>
 
@@ -86,10 +86,10 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 141</h2>
-              <p class="my-box-text">Electrical Circuits I</p>
+              <h2 class="my-box-title">MAT 120</h2>
+              <p class="my-box-text">Calculus I</p>
               <form action= "GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE141">
+              <input type="hidden" name="course" value="MAT120">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
@@ -98,10 +98,10 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 211</h2>
-              <p class="my-box-text">Digital Logic design</p>
+              <h2 class="my-box-title">MAT 125</h2>
+              <p class="my-box-text">Linear Algebra</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE211">
+              <input type="hidden" name="course" value="MAT125">
               <button type="submit" class="box-button">Select</button>
               </form>
               
@@ -112,10 +112,10 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 221</h2>
-              <p class="my-box-text">Signals and Systems</p>
+              <h2 class="my-box-title">MAT 130</h2>
+              <p class="my-box-text">Calculus II</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE221">
+              <input type="hidden" name="course" value="MAT130">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
@@ -124,10 +124,10 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 241</h2>
-              <p class="my-box-text">Electrical Circuits II</p>
+              <h2 class="my-box-title">MAT 250</h2>
+              <p class="my-box-text">Calculus III</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE241">
+              <input type="hidden" name="course" value="MAT250">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
@@ -136,10 +136,10 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE311</h2>
-              <p class="my-box-text">Analog Electronics II</p>
+              <h2 class="my-box-title">MAT 361</h2>
+              <p class="my-box-text">Probability and Statistics</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE311">
+              <input type="hidden" name="course" value="MAT361">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
@@ -149,10 +149,10 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 312</h2>
-              <p class="my-box-text">Power Electronics</p>
+              <h2 class="my-box-title">MAT 350</h2>
+              <p class="my-box-text">Engineering Mathematics</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE312">
+              <input type="hidden" name="course" value="MAT350">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
@@ -161,10 +161,10 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 321</h2>
-              <p class="my-box-text">Intro to Communications Systems</p>
+              <h2 class="my-box-title">PHY 107</h2>
+              <p class="my-box-text">Physics I</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE321">
+              <input type="hidden" name="course" value="PHY107">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
@@ -173,10 +173,10 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 342</h2>
-              <p class="my-box-text">Control Engineering</p>
+              <h2 class="my-box-title">PHY 108</h2>
+              <p class="my-box-text">Physics II</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE342">
+              <input type="hidden" name="course" value="PHY108">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
@@ -185,10 +185,10 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 361</h2>
-              <p class="my-box-text">Electromagnetic Fields & Waves</p>
+              <h2 class="my-box-title">CHE 101</h2>
+              <p class="my-box-text">Chemistry I</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE361">
+              <input type="hidden" name="course" value="CHE101">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
@@ -197,10 +197,10 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 362</h2>
-              <p class="my-box-text">Electrical Machines</p>
+              <h2 class="my-box-title">EEE 452</h2>
+              <p class="my-box-text">Engineering Economics</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE362">
+              <input type="hidden" name="course" value="EEE452">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
@@ -209,10 +209,10 @@ if(!isset($_SESSION['student']))
         <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 411</h2>
-              <p class="my-box-text">Introduction to VLSI Design</p>
+              <h2 class="my-box-title">EEE154</h2>
+              <p class="my-box-text">Engineering Drawing</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE411">
+              <input type="hidden" name="course" value="EEE154">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>

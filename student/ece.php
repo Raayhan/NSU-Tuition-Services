@@ -70,7 +70,7 @@ if(!isset($_SESSION['student']))
   
       <div class="row justify-content-around teacher_dashboard">
         
-        <div class="col-md-3">
+        <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-image"><img src="../img/eee.png"></div>
             
@@ -84,23 +84,23 @@ if(!isset($_SESSION['student']))
          
         </div>
         
-        <div class="col-md-3">
+        <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-image"><img src="../img/cse.png"></div>
             <div class="my-box-content">
               <h2 class="my-box-title">CSE</h2>
               <p class="my-box-text">Computer Sceince & Engineering</p>
-              <a href="SBE.html" class="box-button">Go</a>
+              <a href="CSE.php" class="box-button">Go</a>
            </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 animated zoomIn">
           <div class="my-box-option">
             <div class="my-box-image"><img src="../img/ete.png"></div>
             <div class="my-box-content">
               <h2 class="my-box-title">ETE</h2>
               <p class="my-box-text">Electrical & Telecommunications Engineering</p>
-              <a href="/SBE" class="box-button">Go</a>
+              <a href="#" class="box-button">Go</a>
            </div>
           </div>
         </div>

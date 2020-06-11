@@ -29,7 +29,7 @@ require('database/connect.php');
 <body>
 
 
-      <nav class="navbar navbar-expand-lg navbar-light blue-gradient justify-content-md-center">
+      <nav class="navbar navbar-expand-lg navbar-light blue-gradient justify-content-md-center animated fadeInDown">
         
          <a class="navbar-brand" href="#"><img class="logo" src="img/nsu-ts.png" alt=""></a>
         
@@ -42,14 +42,14 @@ require('database/connect.php');
 <div class="jumbotron text-center  p-4 mb-0">
       <div class="row justify-content-center welcome">
            
-           <div class="col-md-4 offset-md-1 mx-3 my-3">
+           <div class="col-md-4 offset-md-1 mx-3 my-3 animated fadeInLeft">
                 <div class="view overlay">
                      <img src="https://i.ibb.co/BzrBsS2/Panel.png" class="img-fluid" alt="Panel Image">    
                 </div>
            </div>
 
            
-           <div class="col-md-7 text-md-left ml-3 mt-3" style="margin-left: 0px!important;">
+           <div class="col-md-7 text-md-left ml-3 mt-3 animated fadeInLeft" style="margin-left: 0px!important;">
                <a href="#!" class="red-text">
                    <h6 class="h6 pb-1"><i class="fas fa-chalkboard-teacher"></i>  Welcome</h6>
                </a>

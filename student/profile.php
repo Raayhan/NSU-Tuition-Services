@@ -78,7 +78,7 @@ if(!isset($_SESSION['student']))
 ?>
     <div class="row my-2">
         
-         <div class="col-lg-4 order-lg-1 text-center">
+         <div class="col-lg-4 order-lg-1 text-center animated zoomIn">
             <img src="../img/user.png" class="mx-auto img-fluid img-circle d-block" alt="avatar"style="border-radius: 50%;">
             <h4 class="mt-2"><?php echo $_SESSION['student']['first_name'].' '.$_SESSION['student']['last_name'];?></h4>
             <span>Student</span>
@@ -99,7 +99,7 @@ if(!isset($_SESSION['student']))
                 <div class="tab-pane active" id="profile">
                     <h5 class="mb-3">Student Information</h5>
                     <div class="row information">
-                        <div class="col-md-6 left">
+                        <div class="col-md-6 left animated zoomIn">
                             <hr>
                             <strong>Name :</strong> <?php echo $_SESSION['student']['first_name'].' '.$_SESSION['student']['last_name'];?>
                             <hr>
@@ -116,7 +116,7 @@ if(!isset($_SESSION['student']))
                             <strong>Member Since :</strong> <?php echo $_SESSION['student']['member_since'];?>
                             <hr>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 animated slideInRight">
                             <h6><i class="fas fa-award"></i> Recent badges</h6>
                             <a class="badge badge-dark badge-pill">Member</a>
                             <a class="badge badge-dark badge-pill">Student</a>
@@ -124,8 +124,20 @@ if(!isset($_SESSION['student']))
                             <a class="badge badge-dark badge-pill">NSU</a>
                             
                             <hr>
-                            <span class="badge badge-info"><i class="fa fa-user"></i> 0 Followers</span>
-                            <span class="badge badge-primary"><i class="fa fa-user"></i> 0 Following</span>
+                            <span class="badge badge-info"><i class="fa fa-book-reader"></i> &nbsp;<?php 
+                                                $result = mysqli_query($conn, "SELECT course_name FROM student_courses WHERE student_id = {$_SESSION['student']['nsu_id']}");
+                                                $num_rows = mysqli_num_rows($result);
+                                                
+                                                echo "$num_rows";
+
+                                                ?> Courses</span>
+                            <span class="badge badge-primary"><i class="fa fa-user-tie"></i>  &nbsp;<?php 
+                                                $result = mysqli_query($conn, "SELECT teacher_id FROM student_courses WHERE student_id = {$_SESSION['student']['nsu_id']}");
+                                                $num_rows = mysqli_num_rows($result);
+                                                
+                                                echo "$num_rows";
+
+                                                ?> Teachers</span>
                             <span class="badge badge-danger"><i class="fa fa-eye"></i> 0 Views</span>
                         </div>
                         <div class="col-md-12">
@@ -153,7 +165,7 @@ if(!isset($_SESSION['student']))
                     
                 <h5 class="mb-3">Course Information</h5>
                 <div class="list-group course_table my-3">
-                    <a class="list-group-item list-group-item-action flex-column align-items-start">
+                    <a class="list-group-item list-group-item-action flex-column align-items-start animated slideInRight">
                            
 
                 <?php

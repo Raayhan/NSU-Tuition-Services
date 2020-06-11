@@ -21,7 +21,7 @@ if(!isset($_SESSION['student']))
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="icon" href="../img/icon.png" type="image/x-icon">
-    <title>EEE | NSU-TS</title>
+    <title>CSE | NSU-TS</title>
     
     <link rel="stylesheet" href="../css/style.css">
     
@@ -60,7 +60,7 @@ if(!isset($_SESSION['student']))
 
 <div class="section_title">
 
-<h3>Electrical & Electronics Engineering</h3>
+<h3>Computer Science & Engineering</h3>
 <h6>Please select your desired course for tuition</h6>
 </div>
 
@@ -68,13 +68,13 @@ if(!isset($_SESSION['student']))
 
 <div class="container mb-5">
     <div class="row">
-      <div class="col-md-3 animated zoomIn">
+      <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE111</h2>
-              <p class="my-box-text">Analog Electronics I</p>
+              <h2 class="my-box-title">CSE 115</h2>
+              <p class="my-box-text">Programming Language I</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE111">
+              <input type="hidden" name="course" value="CSE115">
               <button type="submit" class="box-button">Select</button>
               </form>
 
@@ -83,25 +83,25 @@ if(!isset($_SESSION['student']))
 
         </div>
 
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 141</h2>
-              <p class="my-box-text">Electrical Circuits I</p>
+              <h2 class="my-box-title">CSE 173</h2>
+              <p class="my-box-text">Discrete Mathematics</p>
               <form action= "GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE141">
+              <input type="hidden" name="course" value="CSE173">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 211</h2>
-              <p class="my-box-text">Digital Logic design</p>
+              <h2 class="my-box-title">CSE 215</h2>
+              <p class="my-box-text">Programming Language II</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE211">
+              <input type="hidden" name="course" value="CSE215">
               <button type="submit" class="box-button">Select</button>
               </form>
               
@@ -109,110 +109,110 @@ if(!isset($_SESSION['student']))
           </div>
         </div>
         
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 221</h2>
-              <p class="my-box-text">Signals and Systems</p>
+              <h2 class="my-box-title">CSE 225</h2>
+              <p class="my-box-text">Data Structures  and Algorithm</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE221">
+              <input type="hidden" name="course" value="CSE225">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 241</h2>
-              <p class="my-box-text">Electrical Circuits II</p>
+              <h2 class="my-box-title">CSE 231</h2>
+              <p class="my-box-text">Digital Logic Design</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE241">
+              <input type="hidden" name="course" value="CSE231">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE311</h2>
-              <p class="my-box-text">Analog Electronics II</p>
+              <h2 class="my-box-title">CSE311</h2>
+              <p class="my-box-text">Database Systems</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE311">
+              <input type="hidden" name="course" value="CSE311">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
           </div>
 
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 312</h2>
-              <p class="my-box-text">Power Electronics</p>
+              <h2 class="my-box-title">CSE 323</h2>
+              <p class="my-box-text">Operating Systems Design</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE312">
+              <input type="hidden" name="course" value="CSE323">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 321</h2>
-              <p class="my-box-text">Intro to Communications Systems</p>
+              <h2 class="my-box-title">CSE 327</h2>
+              <p class="my-box-text">Software Engineering</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE321">
+              <input type="hidden" name="course" value="CSE327">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 342</h2>
-              <p class="my-box-text">Control Engineering</p>
+              <h2 class="my-box-title">CSE 331</h2>
+              <p class="my-box-text">Microprocessor Interfacing & Embedded Sys.</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE342">
+              <input type="hidden" name="course" value="CSE331">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 361</h2>
-              <p class="my-box-text">Electromagnetic Fields & Waves</p>
+              <h2 class="my-box-title">CSE 373</h2>
+              <p class="my-box-text">Design and Analysis of Algorithms</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE361">
+              <input type="hidden" name="course" value="CSE373">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 362</h2>
-              <p class="my-box-text">Electrical Machines</p>
+              <h2 class="my-box-title">CSE 332</h2>
+              <p class="my-box-text">Computer Organization and Architecture</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE362">
+              <input type="hidden" name="course" value="CSE332">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>
           </div>
         </div>
-        <div class="col-md-3 animated zoomIn">
+        <div class="col-md-3">
           <div class="my-box-option">
             <div class="my-box-content">
-              <h2 class="my-box-title">EEE 411</h2>
-              <p class="my-box-text">Introduction to VLSI Design</p>
+              <h2 class="my-box-title">CSE 425</h2>
+              <p class="my-box-text">Concepts of Programming Language</p>
               <form action="GetTeacher.php" method="GET"> 
-              <input type="hidden" name="course" value="EEE411">
+              <input type="hidden" name="course" value="CSE425">
               <button type="submit" class="box-button">Select</button>
               </form>
            </div>

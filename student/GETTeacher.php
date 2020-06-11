@@ -82,7 +82,7 @@ if(!isset($_SESSION['student']))
                                       // output data of each row
                                       while($row = $result->fetch_assoc()) {
   
-                                        echo '<div class="col-md-4">';
+                                        echo '<div class="col-md-4 animated zoomIn">';
                                         
                                        
                                         echo '<div class="my-card-option">';
