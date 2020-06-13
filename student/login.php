@@ -32,8 +32,8 @@ include('../controllers/StudentLoginController.php');
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light blue-gradient justify-content-md-center">
-        <a class="navbar-brand" href="/"><img class="logo" src="../img/nsu-ts.png" alt=""></a>
+<nav class="navbar navbar-expand-lg navbar-light navColor justify-content-md-center">
+        <a class="navbar-brand" href="/"><img class="logo" src="../img/logo.png" alt=""></a>
         
       </nav>
       
@@ -48,6 +48,7 @@ include('../controllers/StudentLoginController.php');
                         </form><br/>
                     </div>
                     <div class="col-md-9 register-right">
+                        <div class="row justify-content-center">
                         <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="" role="tab" aria-controls="home" aria-selected="true">Student</a>
@@ -56,6 +57,7 @@ include('../controllers/StudentLoginController.php');
                                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="../teacher/login.php" role="tab" aria-controls="profile" aria-selected="false">Teacher</a>
                             </li>
                         </ul>
+                        </div>    
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="padding-top:50px;">
                               <form name="LoginForm" method="POST" onsubmit="return Validation()" action="../controllers/StudentLoginController.php">

@@ -45,7 +45,7 @@ if(!isset($_SESSION['teacher']))
 <!----------- Navbar Start----------->
 
 <header>
-<a class="navbar-brand" href="dashboard.php"><img class="logo" src="../img/nsu-ts.png" alt=""></a>
+<a class="navbar-brand" href="dashboard.php"><img class="logo" src="../img/logo.png" alt=""></a>
       <nav class="nav-collapse">
         <ul>
           <li class="menu-item"><a href="dashboard.php" data-scroll><i class="fa fa-home" aria-hidden="true"></i> &nbsp;Home</a></li>
@@ -72,6 +72,10 @@ if(!isset($_SESSION['teacher']))
   
 
 <div class="container profile">
+<?php  if(isset($_SESSION['error'])) { echo '<div class="alert alert-success" style="text-align:center;" role="alert" id="error">'.$_SESSION['error'].'</div>';
+        unset($_SESSION['error']);
+                                    } 
+?>
     <div class="row my-2">
          <div class="col-lg-4 order-lg-1 text-center animated slideInLeft faster">
             <img src="../img/teacher.png" class="mx-auto img-fluid img-circle d-block" alt="avatar"style="border-radius: 50%;">
@@ -217,90 +221,85 @@ if(!isset($_SESSION['teacher']))
                    </div>
                 </div>
                 <div class="tab-pane" id="edit">
-                    <form role="form">
+                <form role="form" action="../controllers/UpdateTeacher.php" method="POST">
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label form-control-label">First name</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="text" value="Jane">
+                                <input class="form-control" name="first_name" type="text" value="<?php echo $_SESSION['teacher']['first_name'];?>">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label form-control-label">Last name</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="text" value="Bishop">
+                                <input class="form-control" name="last_name" type="text" value="<?php echo $_SESSION['teacher']['last_name'];?>">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label form-control-label">Email</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="email" value="email@gmail.com">
+                                <input class="form-control" name="email" type="email" value="<?php echo $_SESSION['teacher']['email'];?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Company</label>
+                            <label class="col-lg-3 col-form-label form-control-label">Phone</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="text" value="">
+                                <input class="form-control" name="phone" type="text" value="<?php echo $_SESSION['teacher']['phone'];?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Website</label>
+                            <label class="col-lg-3 col-form-label form-control-label">NSU ID</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="url" value="">
+                                <input class="form-control" name="nsu_id" type="number" value="<?php echo $_SESSION['teacher']['nsu_id'];?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Address</label>
+                            <label class="col-lg-3 col-form-label form-control-label">Department</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="text" value="" placeholder="Street">
+                                    <select name="department" class="form-control">
+                                        <option value="<?php echo $_SESSION['teacher']['department']?>" selected>Department</option>
+                                        <option value="ECE">ECE</option>
+                                        <option value="BBA">BBA</option>
+                                        <option value="Architecture">Architecture</option>
+                                        <option value="Pharmacy">Pharmacy</option>
+                                        <option value="Civil Engineering">Civil Engineering</option>
+                                        <option value="English">English</option>
+                                        <option value="Enviromental Science">Environmental Science</option>
+                                        <option value="Others">Others</option>
+                                    </select>
                             </div>
                         </div>
+                        
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label"></label>
-                            <div class="col-lg-6">
-                                <input class="form-control" type="text" value="" placeholder="City">
-                            </div>
-                            <div class="col-lg-3">
-                                <input class="form-control" type="text" value="" placeholder="State">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Time Zone</label>
+                            <label class="col-lg-3 col-form-label form-control-label">Gender</label>
                             <div class="col-lg-9">
-                                <select id="user_time_zone" class="form-control" size="0">
-                                    <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                                    <option value="Alaska">(GMT-09:00) Alaska</option>
-                                    <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
-                                    <option value="Arizona">(GMT-07:00) Arizona</option>
-                                    <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
-                                    <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
-                                    <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
-                                    <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                                  <select name="gender" class="form-control">
+                                    <option value="<?php echo $_SESSION['teacher']['gender']?>" selected>Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
+                                    
                                 </select>
+                                <input type="hidden" name="id" value="<?php echo $_SESSION['teacher']['id'];?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Username</label>
+                            <label class="col-lg-3 col-form-label form-control-label red-text">Password</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="text" value="janeuser">
+                                <input class="form-control" id="password" name="password" type="password" value="<?php echo $_SESSION['teacher']['password'];?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Password</label>
+                            <label class="col-lg-3 col-form-label form-control-label red-text">Confirm Password</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="password" value="11111122333">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Confirm password</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="password" value="11111122333">
+                                <input class="form-control" id="cpassword" name="cpassword" type="password">
+                                <span id='message'></span>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label form-control-label"></label>
                             <div class="col-lg-9">
                                 <input type="reset" class="btn btn-secondary" value="Cancel">
-                                <input type="button" class="btn btn-primary" value="Save Changes">
+                                <input type="submit" name="update_btn" class="btn btn-primary" value="Save Changes">
                             </div>
                         </div>
                     </form>
@@ -313,7 +312,14 @@ if(!isset($_SESSION['teacher']))
 
 <div id="footer"></div>
 
-
+<script>
+    $('#password, #cpassword').on('keyup', function () {
+  if ($('#password').val() == $('#cpassword').val()) {
+    $('#message').html('Matched !').css('color', 'green');
+  } else 
+    $('#message').html('Not Matching').css('color', 'red');
+});
+                                    </script>    
 <script src="../js/fastclick.js"></script>
 <script src="../js/scroll.js"></script>
 <script src="../js/fixed-responsive-nav.js"></script>

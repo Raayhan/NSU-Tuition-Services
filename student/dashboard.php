@@ -39,7 +39,7 @@ if(!isset($_SESSION['student']))
 <body>
     
 <header>
-<a class="navbar-brand" href="dashboard.php"><img class="logo" src="../img/nsu-ts.png" alt=""></a>
+<a class="navbar-brand" href="dashboard.php"><img class="logo" src="../img/logo.png" alt=""></a>
       <nav class="nav-collapse">
         <ul>
           <li class="menu-item active"><a href="dashboard.php"><i class="fa fa-home" aria-hidden="true"></i> &nbsp;Home</a></li>

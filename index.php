@@ -29,9 +29,9 @@ require('database/connect.php');
 <body>
 
 
-      <nav class="navbar navbar-expand-lg navbar-light blue-gradient justify-content-md-center animated fadeInDown">
+      <nav class="navbar navbar-expand-lg navbar-light navColor justify-content-md-center animated fadeInDown">
         
-         <a class="navbar-brand" href="#"><img class="logo" src="img/nsu-ts.png" alt=""></a>
+         <a class="navbar-brand" href="#"><img class="logo" src="img/logo.png" alt=""></a>
         
       </nav>
       
@@ -59,7 +59,7 @@ require('database/connect.php');
                <p class ="para">NSU-TS is a platform for NSU Students to find suitable tutors for the courses which they find difficulties.It's also a platform for students who want to earn some money by giving tuitions to other students.</p>
     
                <div class="dropdown">
-                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                   <button type="button" class="btn btn-amber dropdown-toggle" data-toggle="dropdown">
                        <i class="fas fa-sign-in-alt"></i> Login
                    </button>
                    <div class="dropdown-menu">
@@ -70,7 +70,7 @@ require('database/connect.php');
                 </div>
  
                  <div class="dropdown">    
-                      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                      <button type="button" class="btn btn-unique dropdown-toggle" data-toggle="dropdown">
                           <i class="fas fa-user-plus"></i> Register
                       </button>
                       <div class="dropdown-menu">

@@ -29,8 +29,8 @@ include('../controllers/AddStudent.php')
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light blue-gradient justify-content-md-center">
-        <a class="navbar-brand" href="/"><img class="logo" src="../img/nsu-ts.png" alt=""></a>
+<nav class="navbar navbar-expand-lg navbar-light navColor justify-content-md-center">
+        <a class="navbar-brand" href="/"><img class="logo" src="../img/logo.png" alt=""></a>
         
       </nav>
       
@@ -45,6 +45,7 @@ include('../controllers/AddStudent.php')
                         </form><br/>
                     </div>
                     <div class="col-md-9 register-right">
+                    <div class="row justify-content-center">
                         <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="" role="tab" aria-controls="home" aria-selected="true">Student</a>
@@ -53,6 +54,7 @@ include('../controllers/AddStudent.php')
                                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="../teacher/registration.php" role="tab" aria-controls="profile" aria-selected="false">Teacher</a>
                             </li>
                         </ul>
+                        </div>   
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="padding-top:50px;">
                               <form name="RegForm" method="POST" onsubmit="return Validation()" action="../controllers/AddStudent.php">
@@ -66,10 +68,11 @@ include('../controllers/AddStudent.php')
                                             <input type="text" name="last_name" class="form-control" placeholder="Last Name"required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" class="form-control" placeholder="Password"required/>
+                                            <input type="password" id="password" name="password" class="form-control" placeholder="Password"required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="cpassword" class="form-control"  placeholder="Confirm Password"required/>
+                                            <input type="password" id="cpassword" name="cpassword" class="form-control"  placeholder="Confirm Password"required/>
+                                            <span id='message'></span>
                                         </div>
                                        
                                     </div>
@@ -91,6 +94,8 @@ include('../controllers/AddStudent.php')
                                                         <option value="Architecture">Architecture</option>
                                                         <option value="Pharmacy">Pharmacy</option>
                                                         <option value="Civil Engineering">Civil Engineering</option>
+                                                        <option value="English">English</option>
+                                                        <option value="Enviromental Science">Environmental Science</option>
                                                         <option value="Others">Others</option>
                                                     </select>
                                                 </div>
@@ -130,5 +135,13 @@ include('../controllers/AddStudent.php')
 
             <!-- Footer -->
 <div id="footer"></div>
+<script>
+    $('#password, #cpassword').on('keyup', function () {
+  if ($('#password').val() == $('#cpassword').val()) {
+    $('#message').html('Matched !').css('color', 'green');
+  } else 
+    $('#message').html('Not Matching').css('color', 'red');
+});
+                                    </script>   
 </body>
 </html>

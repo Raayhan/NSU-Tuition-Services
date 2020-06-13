@@ -3,6 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.11.2/css/all.css");
 
+.navColor {
+  background-color: #1d2757;
+}
 .logo {
   height: 50px;
 }
@@ -143,27 +146,30 @@ body {
     margin-bottom: 20%;
     padding: 10%;
   }
+  .register-left {
+    display: none;
+  }
 }
 
 .btnRegister {
   float: right;
   margin-top: 10%;
-  border: 5px solid rgba(0, 0, 0, 0.116);
+  border: 1px solid #1d2757;
   border-radius: 1.5rem;
   padding: 2%;
-  background: #0062cc;
+  background: #eb8d00;
   color: #fff;
   font-weight: nomral;
   width: 50%;
   cursor: pointer;
 }
+
 .register .nav-tabs {
   margin-top: 3%;
   border: none;
   background: #0062cc;
   border-radius: 1.5rem;
   width: 28%;
-  float: right;
 }
 .register .nav-tabs .nav-link {
   padding: 2%;
@@ -178,7 +184,7 @@ body {
 }
 .register .nav-tabs .nav-link.active {
   width: 100px;
-  color: #495057;
+  color: #0062cc;
   border: 2px solid #0062cc;
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
@@ -192,10 +198,10 @@ body {
 .btnLogin {
   float: right;
   margin-top: 5%;
-  border: 3px solid rgba(0, 0, 0, 0.116);
+  border: 1px solid #1d2757;
   border-radius: 1.5rem;
   padding: 2%;
-  background: #0062cc;
+  background: #eb8d00;
   color: #fff;
   font-weight: normal;
   width: 100%;
@@ -384,6 +390,7 @@ body {
 .footer-bs .footer-social,
 .footer-bs .footer-ns {
   padding: 10px 25px;
+  height: 150px;
 }
 .footer-bs .footer-nav,
 .footer-bs .footer-social,

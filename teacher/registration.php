@@ -29,8 +29,8 @@ require('../database/connect.php');
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light blue-gradient justify-content-md-center">
-        <a class="navbar-brand" href="/"><img class="logo" src="../img/nsu-ts.png" alt=""></a>
+<nav class="navbar navbar-expand-lg navbar-light navColor justify-content-md-center">
+        <a class="navbar-brand" href="/"><img class="logo" src="../img/logo.png" alt=""></a>
         
       </nav>
       
@@ -45,6 +45,7 @@ require('../database/connect.php');
                         </form><br/>
                     </div>
                     <div class="col-md-9 register-right">
+                    <div class="row justify-content-center">
                         <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="" role="tab" aria-controls="home" aria-selected="true">Teacher</a>
@@ -53,6 +54,7 @@ require('../database/connect.php');
                                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="../student/registration.php" role="tab" aria-controls="profile" aria-selected="false">Student</a>
                             </li>
                         </ul>
+                        </div>   
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="teacher" role="tabpanel" aria-labelledby="home-tab" style="padding-top:50px;">
                                 <h3 class="register-heading">Teacher Registration</h3>
@@ -68,11 +70,12 @@ require('../database/connect.php');
                                         </div>
                                         
                                         <div class="form-group">
-                                            <input type="password" name="password" class="form-control" placeholder="Password"required/>
+                                            <input type="password" id="password" name="password" class="form-control" placeholder="Password"required/>
                                         </div>
                                         
                                         <div class="form-group">
-                                            <input type="password" name="cpassword" class="form-control"  placeholder="Confirm Password"required/>
+                                            <input type="password" id="cpassword" name="cpassword" class="form-control"  placeholder="Confirm Password"required/>
+                                            <span id='message'></span>
                                         </div>
                                        
                                     </div>
@@ -142,5 +145,13 @@ require('../database/connect.php');
 
  
 <idv id="footer"></div>
+<script>
+    $('#password, #cpassword').on('keyup', function () {
+  if ($('#password').val() == $('#cpassword').val()) {
+    $('#message').html('Matched !').css('color', 'green');
+  } else 
+    $('#message').html('Not Matching').css('color', 'red');
+});
+                                    </script>    
 </body>
 </html>
