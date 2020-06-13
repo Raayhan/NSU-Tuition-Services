@@ -75,7 +75,7 @@ require('../database/connect.php');
                                         
                                         <div class="form-group">
                                             <input type="password" id="cpassword" name="cpassword" class="form-control"  placeholder="Confirm Password"required/>
-                                            <span id='message'></span>
+                                            <span style="font-size:12px;" id='message'></span>
                                         </div>
                                        
                                     </div>
@@ -148,10 +148,9 @@ require('../database/connect.php');
 <script>
     $('#password, #cpassword').on('keyup', function () {
   if ($('#password').val() == $('#cpassword').val()) {
-    $('#message').html('Matched !').css('color', 'green');
+    $('#message').html('Matched <i class="fas fa-check-circle"></i>').css('color', 'green');
   } else 
-    $('#message').html('Not Matching').css('color', 'red');
-});
-                                    </script>    
+    $('#message').html('Not Matching <i class="fas fa-times-circle"></i>').css('color', 'red');
+});                              </script>    
 </body>
 </html>

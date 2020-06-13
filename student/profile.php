@@ -299,7 +299,7 @@ if(!isset($_SESSION['student']))
                             <label class="col-lg-3 col-form-label form-control-label red-text">Confirm Password</label>
                             <div class="col-lg-9">
                                 <input class="form-control" id="cpassword" name="cpassword" type="password">
-                                <span id='message'></span>
+                                <span style="font-size:12px;" id='message'></span>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -323,11 +323,10 @@ if(!isset($_SESSION['student']))
 <script>
     $('#password, #cpassword').on('keyup', function () {
   if ($('#password').val() == $('#cpassword').val()) {
-    $('#message').html('Matched !').css('color', 'green');
+    $('#message').html('Matched <i class="fas fa-check-circle"></i>').css('color', 'green');
   } else 
-    $('#message').html('Not Matching').css('color', 'red');
-});
-                                    </script>    
+    $('#message').html('Not Matching <i class="fas fa-times-circle"></i>').css('color', 'red');
+});                              </script>    
 <script src="../js/fastclick.js"></script>
 <script src="../js/scroll.js"></script>
 <script src="../js/fixed-responsive-nav.js"></script>
