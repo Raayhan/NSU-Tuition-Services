@@ -48,10 +48,10 @@ include('../controllers/AddStudent.php')
                     <div class="row justify-content-center">
                         <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="" role="tab" aria-controls="home" aria-selected="true">Student</a>
+                                <a class="nav-link active" id="home-tab"  href="" role="tab" aria-controls="home" aria-selected="true">Student</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="../teacher/registration.php" role="tab" aria-controls="profile" aria-selected="false">Teacher</a>
+                                <a class="nav-link" id="profile-tab"  href="../teacher/registration.php" role="tab" aria-controls="profile" aria-selected="false">Teacher</a>
                             </li>
                         </ul>
                         </div>   
@@ -144,4 +144,5 @@ include('../controllers/AddStudent.php')
 });
                                     </script>   
 </body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </html>

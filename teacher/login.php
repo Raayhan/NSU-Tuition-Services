@@ -48,10 +48,10 @@ include('../controllers/TeacherLoginController.php')
                     <div class="row justify-content-center">
                         <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="" role="tab" aria-controls="home" aria-selected="true">Teacher</a>
+                                <a class="nav-link active" id="home-tab"  href="" role="tab" aria-controls="home" aria-selected="true">Teacher</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="../student/login.php" role="tab" aria-controls="profile" aria-selected="false">Student</a>
+                                <a class="nav-link" id="profile-tab"  href="../student/login.php" role="tab" aria-controls="profile" aria-selected="false">Student</a>
                             </li>
                         </ul>
                         </div>   
@@ -100,5 +100,6 @@ include('../controllers/TeacherLoginController.php')
 
  
 <div id="footer">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>

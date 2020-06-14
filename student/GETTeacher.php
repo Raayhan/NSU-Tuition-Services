@@ -21,7 +21,7 @@ if(!isset($_SESSION['student']))
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="icon" href="../img/icon.png" type="image/x-icon">
-    <title>EEE | NSU-TS</title>
+    <title>Teachers | NSU-TS</title>
     
     <link rel="stylesheet" href="../css/style.css">
     
@@ -51,7 +51,7 @@ if(!isset($_SESSION['student']))
         <ul>
           <li class="menu-item active"><a href="dashboard.php"><i class="fa fa-home" aria-hidden="true"></i> &nbsp;Home</a></li>
           <li class="menu-item"><a href="profile.php"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;  <?php echo $_SESSION['student']['first_name']?></a></li>
-          <li class="menu-item"><a href="#projects"><i class="fas fa-phone-alt"></i>&nbsp; Support</a></li>
+          <li class="menu-item"><a href="../pages/support.php"><i class="fas fa-phone-alt"></i>&nbsp; Support</a></li>
           <li class="menu-item"><a href="../controllers/StudentSignout.php"><i class="fa fa-power-off" aria-hidden="true"></i> &nbsp;Sign Out</a></li>
           
         </ul>

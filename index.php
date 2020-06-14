@@ -31,7 +31,7 @@ require('database/connect.php');
 
       <nav class="navbar navbar-expand-lg navbar-light navColor justify-content-md-center animated fadeInDown">
         
-         <a class="navbar-brand" href="#"><img class="logo" src="img/logo.png" alt=""></a>
+         <a class="navbar-brand" href="index.php"><img class="logo" src="img/logo.png" alt=""></a>
         
       </nav>
       
@@ -39,12 +39,12 @@ require('database/connect.php');
        
 
     
-<div class="jumbotron text-center  p-4 mb-0">
+<div class="jumbotron text-center  p-4 mb-0" style="padding-bottom: 120px!important;">
       <div class="row justify-content-center welcome">
            
            <div class="col-md-4 offset-md-1 mx-3 my-3 animated fadeInLeft">
                 <div class="view overlay">
-                     <img src="https://i.ibb.co/BzrBsS2/Panel.png" class="img-fluid" alt="Panel Image">    
+                     <img src="img/index.png" class="img-fluid" alt="Panel Image">    
                 </div>
            </div>
 

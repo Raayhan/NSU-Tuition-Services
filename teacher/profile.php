@@ -50,7 +50,7 @@ if(!isset($_SESSION['teacher']))
         <ul>
           <li class="menu-item"><a href="dashboard.php" data-scroll><i class="fa fa-home" aria-hidden="true"></i> &nbsp;Home</a></li>
           <li class="menu-item active"><a href="profile.php" data-scroll><i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp;  <?php echo $_SESSION['teacher']['first_name']?></a></li>
-          <li class="menu-item"><a href="#projects" data-scroll><i class="fas fa-phone-alt"></i> &nbsp;Support</a></li>
+          <li class="menu-item"><a href="../pages/support.php" data-scroll><i class="fas fa-phone-alt"></i> &nbsp;Support</a></li>
           <li class="menu-item"><a href="../controllers/teacherSignout.php"><i class="fa fa-power-off" aria-hidden="true"></i> &nbsp;Sign Out</a></li>
           
         </ul>
