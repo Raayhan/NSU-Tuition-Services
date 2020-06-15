@@ -38,6 +38,9 @@ if(!isset($_SESSION['student']))
         $(function(){
         $("#footer").load("../layouts/footer.html"); 
           });
+          function goBack() {
+           window.history.back();
+             }
     </script> 
   
 </head>  
@@ -67,6 +70,9 @@ if(!isset($_SESSION['student']))
 
 
 <div class="container mb-5">
+    <div class="row justify-content-start">
+       <button class="btn back_button" onclick="goBack()"><i class="fas fa-chevron-circle-left"></i> Go Back</button>
+    </div>
     <div class="row">
       <div class="col-md-3 animated zoomIn faster">
           <div class="my-box-option">

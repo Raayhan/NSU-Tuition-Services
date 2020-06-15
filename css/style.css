@@ -484,10 +484,10 @@ body {
 
 .contact-form {
   background: rgba(255, 255, 255, 0.76);
-  margin-top: 0%;
-  margin-bottom: 0%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   width: 100%;
-  padding-top: 5%;
+  padding-top: 0%;
 }
 .contact-form .form-control {
   border-radius: 1rem;
@@ -542,4 +542,12 @@ body {
 .support {
   font-family: "Poppins", sans-serif !important;
   text-align: center;
+}
+
+.back_button {
+  background-color: #1d2757 !important;
+  font-size: 10px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  margin-left: 15px !important;
 }

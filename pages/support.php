@@ -38,6 +38,9 @@ if((!isset($_SESSION['student'])) and (!isset($_SESSION['teacher']))  )
         $(function(){
         $("#footer").load("../layouts/footer.html"); 
           });
+          function goBack() {
+           window.history.back();
+             }
     </script> 
   
 </head>  
@@ -75,7 +78,9 @@ if((!isset($_SESSION['student'])) and (!isset($_SESSION['teacher']))  )
 
 
 <div class="container contact-form">
-
+    <div class="row justify-content-start">
+       <button class="btn back_button ml-4 mt-4" onclick="goBack()"><i class="fas fa-chevron-circle-left"></i> Go Back</button>
+    </div>
     <div class="row justify-content-center support animated zoomIn faster">
         
              <div class="contact-image">
