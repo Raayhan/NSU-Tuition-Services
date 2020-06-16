@@ -117,6 +117,9 @@ require('../database/connect.php');
                                                 </div>
                                           
                                             
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" value=""required>  &nbsp;I Agree to the <a class="red-text">Terms of Services</a> </label>
+                                                 </div>
                                             
                                         <input type="hidden" name="member_since"/>
                                         <input type="submit" class="btnRegister" name="register_btn" value="Register"/>
@@ -124,7 +127,7 @@ require('../database/connect.php');
 
                                        
                                     </div>
-                                    <span class="mt-4">By clicking "Register" you agree with our <a class="red-text">Terms of Services</a></span>
+                                   
                                 </div>
 </form>
                             </div>
