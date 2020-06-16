@@ -551,3 +551,19 @@ body {
   padding-right: 5px !important;
   margin-left: 15px !important;
 }
+.custom {
+  width: 50% !important;
+  font-size: 12px !important;
+  margin: 6px !important;
+}
+.settings_card {
+  width: 50% !important;
+}
+@media screen and (max-width: 412px) {
+  .settings_card {
+    width: 100% !important;
+  }
+  .custom {
+    width: 100% !important;
+  }
+}

@@ -46,6 +46,7 @@ if(!isset($_SESSION['teacher']))
           <li class="menu-item active"><a href="dashboard.php"><i class="fa fa-home" aria-hidden="true"></i> &nbsp;Home</a></li>
           <li class="menu-item"><a href="profile.php"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;  <?php echo $_SESSION['teacher']['first_name']?></a></li>
           <li class="menu-item"><a href="../pages/support.php"><i class="fas fa-phone-alt"></i>&nbsp; Support</a></li>
+          <li class="menu-item"><a href="../pages/settings.php"><i class="fa fa-users-cog" aria-hidden="true"></i> &nbsp;Settings</a></li>
           <li class="menu-item"><a href="../controllers/TeacherSignout.php"><i class="fa fa-power-off" aria-hidden="true"></i> &nbsp;Sign Out</a></li>
           
         </ul>
@@ -77,7 +78,7 @@ if(!isset($_SESSION['teacher']))
   </div>
 
   <div class="container profile">
-  <?php  if(isset($_SESSION['error'])) { echo '<div class="alert alert-success" style="text-align:center;" role="alert" id="error">'.$_SESSION['error'].'</div>';
+  <?php  if(isset($_SESSION['error'])) { echo '<div class="alert alert-info" style="text-align:center;" role="alert" id="error">'.$_SESSION['error'].'</div>';
         unset($_SESSION['error']);
                                     } 
 ?>
@@ -1036,7 +1037,7 @@ if(!isset($_SESSION['teacher']))
                                     <input type="hidden" name="nsu_id" value=<?php echo $_SESSION['teacher']['nsu_id']?>>
                                     <input type="hidden" name="department" value=<?php echo $_SESSION['teacher']['department']?>>
                                     <input type="hidden" name="time">
-                                    <button type="submit" name ="Add_btn" class="btn btn-info mb-4 btn-block">ADD</button>
+                                    <button type="submit" name ="Add_btn" class="btn btn-dark-green mb-4 btn-block">ADD</button>
                                     </form>
                                </div> 
                                <hr>

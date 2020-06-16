@@ -72,7 +72,7 @@ if(!isset($_SESSION['student']))
   
 
 <div class="container profile">
-<?php  if(isset($_SESSION['error'])) { echo '<div class="alert alert-success" style="text-align:center;" role="alert" id="error">'.$_SESSION['error'].'</div>';
+<?php  if(isset($_SESSION['error'])) { echo '<div class="alert alert-info" style="text-align:center;" role="alert" id="error">'.$_SESSION['error'].'</div>';
         unset($_SESSION['error']);
                                     } 
 ?>
