@@ -90,12 +90,12 @@ if(!isset($_SESSION['teacher']))
                 unset($_SESSION['error']);
                                             } 
         ?>
-    <div class="row justify-content-center my-2">
+    <div class="row justify-content-center my-2 teacher_course">
         
          
         <div class="col-lg-8 order-lg-2">
              <ul class="nav nav-tabs justify-content-around animated zoomIn faster">
-                  <li class="nav-item">
+                  <li class="nav-item ">
                       <a href="" data-target="#status" data-toggle="tab" class="nav-link tab_button active"><i class="fas fa-check-circle" aria-hidden="true"></i> Status</a>
                   </li>
                   <li class="nav-item">
@@ -169,7 +169,7 @@ if(!isset($_SESSION['teacher']))
                                      <h5 class="mb-3">Courses Information</h5>
                                 </div>
                                
-                                <div class="table-responsive text-nowrap mb-5 animated zoomIn faster"> 
+                                <div class="table-responsive text-nowrap mb-5 teacher_course animated zoomIn faster"> 
                                     <hr>
                                     <table class="table table-hover">
                                           <thead class="rgba-teal-slight">
@@ -232,7 +232,7 @@ if(!isset($_SESSION['teacher']))
                               </div>
                               
                               <div class="row justify-content-center mb-4"style="margin-left: 0px;margin-right: 0px;">
-                                   <form method="POST" action="../controllers/AddTeacherCourse.php">
+                                   <form method="POST" action="../controllers/AddTeacherCourse.php" name="myForm">
                               
                                    <select name="name" class=" form-control selectpicker mb-4" data-live-search="true" data-width="auto" data-style="btn-indigo btn-block">
                                                       
@@ -1036,15 +1036,14 @@ if(!isset($_SESSION['teacher']))
                                     <input type="hidden" name="phone" value=<?php echo $_SESSION['teacher']['phone']?>>
                                     <input type="hidden" name="nsu_id" value=<?php echo $_SESSION['teacher']['nsu_id']?>>
                                     <input type="hidden" name="department" value=<?php echo $_SESSION['teacher']['department']?>>
-                                    <input type="hidden" name="time">
+                                    <input type="hidden" name="currentDate">
                                     <button type="submit" name ="Add_btn" class="btn btn-dark-green mb-4 btn-block">ADD</button>
                                     </form>
                                </div> 
                                <hr>
                            
                             
-                              
-                                          
+                            
                                     
                                     
                               
@@ -1059,7 +1058,7 @@ if(!isset($_SESSION['teacher']))
                                    <h5 class="mt-3 mb-3">Current Students</h5>
                               </div>
                 
-                              <div class="table-responsive text-nowrap mb-5 animated zoomIn faster"> 
+                              <div class="table-responsive text-nowrap mb-5 teacher_course animated zoomIn faster"> 
                                      <hr>
                                      <table class="table table-hover">
                                            <thead class="rgba-teal-slight">
@@ -1134,6 +1133,18 @@ if(!isset($_SESSION['teacher']))
 
 
 <div id="footer"></div>
+<script>
+const myForm = document.querySelector('#my-Form')
+
+// 1: get local date and time values
+let sysDate  = new Date()  
+  , userDate = new Date(Date.UTC(sysDate.getFullYear(), sysDate.getMonth(), sysDate.getDate(),  sysDate.getHours(), sysDate.getMinutes(), 0));
+
+// 2: set interface values !
+myForm.currentDate.valueAsDate = userDate
+myForm.currentTime.valueAsDate = userDate
+</script>
+              
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 <script src="../js/script.js"></script>
 <script src="../js/fastclick.js"></script>

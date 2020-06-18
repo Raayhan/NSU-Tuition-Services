@@ -122,7 +122,7 @@ if((!isset($_SESSION['student'])) and (!isset($_SESSION['teacher']))  )
                  ?>">
                               
 
-                  <button class="btn btn-dark-green btn-sm" style="padding:5px!important;margin-left:0px!important;" name="change_btn" type="submit">Save Changes</button>
+                  <button class="btn btn-dark-green btn-sm" style="padding:5px!important;margin-left:0px!important;" name="change_btn" type="submit">Change Email</button>
 
 
              </form>
@@ -137,13 +137,13 @@ if((!isset($_SESSION['student'])) and (!isset($_SESSION['teacher']))  )
              
                        <form style="padding:10px!important" method="POST" action="../controllers/ChangePassword.php">
                           <div class="form-group">
-                             <input style="border-radius:0px;" name="password" type="password"  class="form-control mb-4" placeholder="Old Password"required>
+                             <input style="border-radius:5px;" name="password" type="password"  class="form-control mb-4" placeholder="Old Password"required>
                           </div>
                           <div class="form-group">
-                              <input style="border-radius:0px;" id="password" name="newPassword" type="password" class="form-control mb-4" placeholder="New Password"required>
+                              <input style="border-radius:5px;" id="password" name="newPassword" type="password" class="form-control mb-4" placeholder="New Password"required>
                          </div>
                          <div class="form-group">
-                              <input style="border-radius:0px;" id="cpassword" type="password" class="form-control mb-4" placeholder="Confirm New Password"required>
+                              <input style="border-radius:5px;" id="cpassword" type="password" class="form-control mb-4" placeholder="Confirm New Password"required>
                               <span style="font-size:12px;" id='message'></span>
                          </div>
 
@@ -157,7 +157,7 @@ if((!isset($_SESSION['student'])) and (!isset($_SESSION['teacher']))  )
                               ?>">
                               
 
-                  <button class="btn btn-dark-green btn-sm" style="padding:5px!important;margin-left:0px!important;" name="change_btn" type="submit">Save Changes</button>
+                  <button class="btn btn-dark-green btn-sm" style="padding:5px!important;margin-left:0px!important;" name="change_btn" type="submit">Change Password</button>
 
 
 
@@ -171,13 +171,13 @@ if((!isset($_SESSION['student'])) and (!isset($_SESSION['teacher']))  )
                  <div class="card card-body mb-4 settings_card" style="padding-top:50px!important; margin-left:6px;">
                  <span class="red-text" style="font-size:14px!important;"> Deleting account will permanently remove account activities,informations & data. This process can not be undone.</span>
                 
-                 <form style="padding:10px!important" method="POST" action="../controllers/ChangePassword.php">
-                      <div class="checkbox">
+                 <form style="padding:10px!important" method="POST" action="../controllers/DeleteAccount.php">
+                      <div class="checkbox mt-4" style="font-size:12px!important;">
                          <label><input type="checkbox" value=""required>  &nbsp;I Agree</label>
                       </div>
                           
                           <div class="form-group">
-                             <input style="border-radius:0px;" name="password" type="password"  class="form-control mb-4" placeholder="Enter Account Password"required>
+                             <input style="border-radius:5px;" name="password" type="password"  class="form-control mb-4" placeholder="Enter Account Password"required>
                           </div>
                           
 
@@ -191,7 +191,7 @@ if((!isset($_SESSION['student'])) and (!isset($_SESSION['teacher']))  )
                               ?>">
                               
 
-                  <button class="btn btn-dark-green btn-sm" style="padding:5px!important;margin-left:0px!important;" name="change_btn" type="submit">Save Changes</button>
+                  <button class="btn btn-danger btn-sm" style="padding:5px!important;margin-left:0px!important;" name="delete_btn" type="submit">Delete Account</button>
 
 
 
@@ -203,7 +203,7 @@ if((!isset($_SESSION['student'])) and (!isset($_SESSION['teacher']))  )
         
     </div>
     <button class="btn btn-indigo custom" type="button" data-toggle="collapse" data-target="#ResetAccount"
-                 aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-redo"></i> &nbsp;Reset Account&nbsp; <i class="fas fa-caret-down"></i></button>
+                 aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-redo"></i> &nbsp;Reset Activity&nbsp; <i class="fas fa-caret-down"></i></button>
                  <div class="collapse" id="ResetAccount">
                  <div class="card card-body mb-4 settings_card" style="padding-top:50px!important; margin-left:6px;">
                      

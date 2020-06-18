@@ -8,28 +8,28 @@ if(!isset($_SESSION))
 include('../database/connect.php');
 // variable declaration
 
-$email      = "";
+
 $id         = "";
 $password   = "";
 $errors     = array();
 
 // call the register() function if register_btn is clicked
-if (isset($_POST['change_btn'])) {
-	change();
+if (isset($_POST['delete_btn'])) {
+	delete();
 }
 
     
 
 
 
-function change(){
+function delete(){
 	// call these variables with the global keyword to make them available in function
-	global $conn, $errors, $email, $id;
+	global $conn, $errors, $password, $id;
 
 	// receive all input values from the form. Call the e() function
     // defined below to escape form values
      
-    $email        = $_POST["email"];
+   
     $id           = $_POST["id"];
     $password     = $_POST["password"];
 
@@ -52,16 +52,18 @@ function change(){
 
 
 
-      $query = ("UPDATE students SET email = '$email' WHERE id = '$id'");
+      $query = "DELETE FROM students WHERE id='$id'";
 
     if (mysqli_query($conn, $query)) {
       
-      
-      $_SESSION["error"]="Email Changed Successfully <i class='fas fa-check-circle'></i>";
-			header('location: ../pages/settings.php');
+        
+      $_SESSION["error"]="Account has been deleted <i class='fas fa-check-circle'></i>";
+            header('location: ../student/login.php');
+            unset($_SESSION['student']);
+        
       }
     else {
-      $_SESSION["error"]="Failed to Change Email <i class='fas fa-times-circle'></i>";
+      $_SESSION["error"]="Failed to delete account <i class='fas fa-times-circle'></i>";
 			header('location: ../pages/settings.php');
       }
 
@@ -92,16 +94,17 @@ if (isset($_SESSION['teacher'])){
 
 
 
-  $query = ("UPDATE teachers SET email = '$email' WHERE id = '$id'");
+  $query = ("DELETE FROM teachers WHERE id='$id'");
 
 if (mysqli_query($conn, $query)) {
   
   
-  $_SESSION["error"]="Email Changed Successfully <i class='fas fa-check-circle'></i>";
+  $_SESSION["error"]="Account has been deleted <i class='fas fa-check-circle'></i>";
         header('location: ../pages/settings.php');
+        unset($_SESSION['teacher']);
   }
 else {
-  $_SESSION["error"]="Failed to Change Email <i class='fas fa-times-circle'></i>";
+  $_SESSION["error"]="Failed to delete account <i class='fas fa-times-circle'></i>";
         header('location: ../pages/settings.php');
   }
 

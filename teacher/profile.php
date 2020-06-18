@@ -73,7 +73,7 @@ if(!isset($_SESSION['teacher']))
   
 
 <div class="container profile">
-<?php  if(isset($_SESSION['error'])) { echo '<div class="alert alert-success" style="text-align:center;" role="alert" id="error">'.$_SESSION['error'].'</div>';
+<?php  if(isset($_SESSION['error'])) { echo '<div class="alert alert-info" style="text-align:center;" role="alert" id="error">'.$_SESSION['error'].'</div>';
         unset($_SESSION['error']);
                                     } 
 ?>
@@ -222,7 +222,7 @@ if(!isset($_SESSION['teacher']))
                    </div>
                 </div>
                 <div class="tab-pane" id="edit">
-                <form role="form" action="../controllers/UpdateTeacher.php" method="POST">
+                <form role="form" action="../controllers/UpdateTeacher.php" method="POST" id="myForm">
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label form-control-label">First name</label>
                             <div class="col-lg-9">
@@ -294,6 +294,7 @@ if(!isset($_SESSION['teacher']))
                             <div class="col-lg-9">
                                 <input class="form-control" id="cpassword" name="cpassword" type="password">
                                 <span style="font-size:12px;" id='message'></span>
+                                
                             </div>
                         </div>
                         <div class="form-group row">
@@ -319,7 +320,11 @@ if(!isset($_SESSION['teacher']))
     $('#message').html('Matched <i class="fas fa-check-circle"></i>').css('color', 'green');
   } else 
     $('#message').html('Not Matching <i class="fas fa-times-circle"></i>').css('color', 'red');
-});                              
+}); 
+
+
+
+
 </script>      
 <script src="../js/fastclick.js"></script>
 <script src="../js/scroll.js"></script>

@@ -25,7 +25,7 @@ if (isset($_POST['Add_btn'])) {
 // ADD course
 function add(){
 	// call these variables with the global keyword to make them available in function
-	global $conn, $errors, $name, $first_name, $last_name, $nsu_id, $email, $department, $phone;
+	global $conn, $errors, $name, $first_name, $last_name, $nsu_id, $email, $department, $phone,$time;
 
 	
       $name            = $_POST["name"];
@@ -34,7 +34,11 @@ function add(){
 	  $nsu_id          = $_POST["nsu_id"]; 
 	  $email           = $_POST["email"];
 	  $phone           = $_POST["phone"];
-      $department      = $_POST["department"];
+	  $department      = $_POST["department"];
+	  
+	 
+	  date_default_timezone_set('Asia/Dhaka');
+	  $time = date('d-m-Y h:i A', time());
       
       
 
@@ -44,7 +48,7 @@ function add(){
 
 
     $query = "INSERT INTO teacher_courses (name, first_name, last_name ,email, phone, nsu_id, department, time)
-    VALUES ('$name', '$first_name', '$last_name', '$email','$phone','$nsu_id','$department',now())";
+    VALUES ('$name', '$first_name', '$last_name', '$email','$phone','$nsu_id','$department','$time')";
 
     if (mysqli_query($conn, $query)) {
       

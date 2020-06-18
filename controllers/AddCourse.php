@@ -14,6 +14,7 @@ $teacher_id     = "";
 $student_id     = "";
 $teacher_email  = "";
 $teacher_phone  = "";
+$time           = "";
 $teacher_department ="";
 $errors   = array();
 
@@ -38,13 +39,15 @@ function add(){
 	  $teacher_department = $_POST["teacher_department"];
       
 
+	  date_default_timezone_set('Asia/Dhaka');
+	  $time = date('d-m-Y h:i A', time());
+      
 
 
 
 
-
-    $query = "INSERT INTO student_courses (course_name, student_name, teacher_name, teacher_id,student_id,teacher_email,teacher_phone,teacher_department)
-    VALUES ('$course_name', '$student_name', '$teacher_name', '$teacher_id', '$student_id','$teacher_email','$teacher_phone','$teacher_department')";
+    $query = "INSERT INTO student_courses (course_name, student_name, teacher_name, teacher_id,student_id,teacher_email,teacher_phone,teacher_department,time)
+    VALUES ('$course_name', '$student_name', '$teacher_name', '$teacher_id', '$student_id','$teacher_email','$teacher_phone','$teacher_department','$time')";
 
     if (mysqli_query($conn, $query)) {
       

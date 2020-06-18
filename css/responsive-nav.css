@@ -299,8 +299,9 @@ header {
 }
 
 .nav-toggle.active:before {
-  font-size: 24px;
-  content: "\78"; /* Close icon */
+  font-size: 30px;
+  font-weight: 700;
+  content: "\00d7"; /* Close icon */
 }
 body {
   margin-top: 50px !important;

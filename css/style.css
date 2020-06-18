@@ -291,6 +291,21 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 12px !important;
 }
+.teacher_course {
+  font-size: 14px !important;
+}
+.teacher_course table td {
+  font-size: 14px !important;
+}
+
+@media screen and (max-width: 350px) {
+  .teacher_course table td {
+    font-size: 10px !important;
+  }
+  .teacher_course {
+    font-size: 12px !important;
+  }
+}
 .course_list hr {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -329,7 +344,11 @@ body {
   margin-bottom: 0;
   text-align: center;
 }
-
+@media screen and (max-width: 350px) {
+  .count-text {
+    font-size: 12px;
+  }
+}
 .fa-2x {
   margin: 0 auto;
   float: none;

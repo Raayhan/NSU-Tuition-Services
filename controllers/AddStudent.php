@@ -13,8 +13,9 @@ $email      = "";
 $phone      = "";
 $gender     = "";
 $department = "";
-$password   ="";
-$nsu_id     ="";
+$password   = "";
+$nsu_id     = "";
+$time       = "";
 $errors   = array();
 
 // call the register() function if register_btn is clicked
@@ -25,7 +26,7 @@ if (isset($_POST['register_btn'])) {
 // REGISTER USER
 function register(){
 	// call these variables with the global keyword to make them available in function
-	global $conn, $errors, $first_name, $last_name, $email, $phone, $gender ,$department, $password;
+	global $conn, $errors, $first_name, $last_name, $email, $phone, $gender ,$department, $password,$time;
 
 	// receive all input values from the form. Call the e() function
     // defined below to escape form values
@@ -40,13 +41,15 @@ function register(){
 	  $nsu_id       = $_POST["nsu_id"];
 
 
-
+	  date_default_timezone_set('Asia/Dhaka');
+	  $time = date('d-m-Y');
+      
 
 
 
 
     $query = "INSERT INTO students (first_name, last_name, email, password, phone, gender, department, nsu_id, member_since)
-    VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$gender', '$department','$nsu_id',now())";
+    VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$gender', '$department','$nsu_id','$time')";
 
     if (mysqli_query($conn, $query)) {
       // get id of the created user

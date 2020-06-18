@@ -48,11 +48,11 @@ function update(){
     if (mysqli_query($conn, $query)) {
       
       
-      $_SESSION["error"]="Success! Sign In Again to View Changes <i class='fas fa-check-circle'></i>";
+      $_SESSION["error"]="Profile Updated (changes will take effect after signout) <i class='fas fa-check-circle'></i>";
 			header('location: ../teacher/profile.php');
       }
     else {
-      $_SESSION["error"]="Failed to Update Profile <i class='fas fa-check-circle'></i>";
+      $_SESSION["error"]="Failed to Update Profile <i class='fas fa-times-circle'></i>";
 			header('location: ../teacher/profile.php');
       }
 

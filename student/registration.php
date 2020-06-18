@@ -114,7 +114,7 @@ include('../controllers/AddStudent.php')
                                                 </div>
                                           
                                             
-                                                <div class="checkbox">
+                                                <div class="checkbox" style="font-size:12px!important;">
                                                   <label><input type="checkbox" value=""required>  &nbsp;I Agree to the <a class="red-text">Terms of Services</a> </label>
                                                  </div>
                                         <input type="hidden" name="member_since"/>

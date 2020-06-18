@@ -15,6 +15,7 @@ $gender     = "";
 $department = "";
 $password   = "";
 $nsu_id     = "";
+$time       = "";
 $errors   = array();
 
 // call the register() function if register_btn is clicked
@@ -38,7 +39,9 @@ function register(){
 	  $department   = $_POST["department"];
 	  $nsu_id       = $_POST["nsu_id"];
 
-
+	  date_default_timezone_set('Asia/Dhaka');
+	  $time = date('d-m-Y');
+      
 
 
 	// form validation: ensure that the form is correctly filled
@@ -58,7 +61,7 @@ function register(){
 
 
     $query = "INSERT INTO teachers (first_name, last_name, email, password, phone, gender, department,nsu_id, member_since)
-    VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$gender', '$department', '$nsu_id',now())";
+    VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$gender', '$department', '$nsu_id','$time')";
 
     if (mysqli_query($conn, $query)) {
 		$logged_in_teacher_id = mysqli_insert_id($conn);

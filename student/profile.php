@@ -197,6 +197,7 @@ if(!isset($_SESSION['student']))
                                               echo '<strong>Department : </strong>'.$row['teacher_department'].'<hr>';
                                               echo '<strong>Phone : </strong>'.$row['teacher_phone'].'<hr>';
                                               echo '<strong>Email : </strong>'.$row['teacher_email'].'<hr>';
+                                              echo '<strong>Added On : </strong>'.$row['time'].'<hr>';
                                         
                                               
                                               echo '</div>';
