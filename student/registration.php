@@ -37,7 +37,7 @@ include('../controllers/AddStudent.php')
       <div class="container-fluid register mt-0">
                 <div class="row">
                     <div class="col-md-3 register-left">
-                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <img src="../img/icon-white.png" alt=""/>
                         <h3>Welcome</h3>
                         <p>You are 30 seconds away from becoming a NSU-TS Member!</p>
                         <form action="login.php" method="get">

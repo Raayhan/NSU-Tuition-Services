@@ -37,7 +37,7 @@ include('../controllers/TeacherLoginController.php')
       <div class="container-fluid register mt-0">
                 <div class="row">
                     <div class="col-md-3 register-left">
-                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <img src="../img/icon-white.png" alt=""/>
                         <h3>Welcome</h3>
                         <p>Login & Enjoy NSU-TS Services!</p>
                         <form action="registration.php" method="get">
@@ -76,7 +76,7 @@ include('../controllers/TeacherLoginController.php')
                                         </div>
                                         
                                         <input type="submit" class="btnLogin" name="login_btn" value="Login"/>
-                                        
+                                        <a style="font-size:10px; color:black" href="../pages/ForgotPass.php">Forgot password?</a>
                                     </div>
                                     
                                    

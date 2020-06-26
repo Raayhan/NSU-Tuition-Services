@@ -53,8 +53,9 @@ if(!isset($_SESSION['student']))
 <a class="navbar-brand" href="dashboard.php"><img class="logo" src="../img/logo.png" alt=""></a>
       <nav class="nav-collapse">
         <ul>
-          <li class="menu-item active"><a href="dashboard.php"><i class="fa fa-home" aria-hidden="true"></i> &nbsp;Home</a></li>
+          <li class="menu-item"><a href="dashboard.php"><i class="fa fa-home" aria-hidden="true"></i> &nbsp;Home</a></li>
           <li class="menu-item"><a href="profile.php"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;  <?php echo $_SESSION['student']['first_name']?></a></li>
+          <li class="menu-item"><a href="tuitions.php"><i class="fas fa-book-open"></i>&nbsp; Tuitions</a></li>
           <li class="menu-item"><a href="../pages/support.php"><i class="fas fa-phone-alt"></i>&nbsp; Support</a></li>
           <li class="menu-item"><a href="../pages/settings.php"><i class="fa fa-users-cog" aria-hidden="true"></i> &nbsp;Settings</a></li>
           <li class="menu-item"><a href="../controllers/StudentSignout.php"><i class="fa fa-power-off" aria-hidden="true"></i> &nbsp;Sign Out</a></li>

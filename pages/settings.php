@@ -56,6 +56,7 @@ if((!isset($_SESSION['student'])) and (!isset($_SESSION['teacher']))  )
        echo'<ul>
           <li class="menu-item"><a href="../student/dashboard.php"><i class="fa fa-home" aria-hidden="true"></i> &nbsp;Home</a></li>
           <li class="menu-item"><a href="../student/profile.php"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;'.$_SESSION['student']['first_name'].'</a></li>
+          <li class="menu-item"><a href="../student/tuitions.php"><i class="fas fa-book-open"></i>&nbsp; Tuitions</a></li>
           <li class="menu-item"><a href="../pages/support.php"><i class="fas fa-phone-alt"></i>&nbsp; Support</a></li>
           <li class="menu-item active"><a href="../pages/settings.php"><i class="fa fa-users-cog" aria-hidden="true"></i> &nbsp;Settings</a></li>
           <li class="menu-item"><a href="../controllers/StudentSignout.php"><i class="fa fa-power-off" aria-hidden="true"></i> &nbsp;Sign Out</a></li>
